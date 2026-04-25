@@ -1,0 +1,28 @@
+{
+  "env": {
+    "SHELL": "C:\\软件\\Git\\bin\\bash.exe"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(npm view *)",
+      "WebSearch",
+      "WebFetch(domain:registry.npmjs.org)",
+      "Bash(npm install *)",
+      "Bash(npm -v)",
+      "Bash(npm run *)",
+      "WebFetch(domain:docs.phaser.io)",
+      "Skill(doko)",
+      "Skill(doko:*)",
+      "Bash(dokobot doko *)",
+      "Read(//c/Users/51440/.claude/skills/**)",
+      "Edit(/.claude/skills/phaser4-docs/**)",
+      "Bash(git init *)",
+      "Bash(gh repo *)",
+      "Bash(git remote *)",
+      "Bash(git ls-remote *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
+    ]
+  },
+  "defaultShell": "bash"
+}

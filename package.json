@@ -1,0 +1,20 @@
+{
+  "name": "guyu-shuangchen",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "《孤屿霜尘》 - 2D 武侠像素风游戏项目",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "phaser": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.8.3",
+    "vite": "^7.0.0"
+  }
+}
