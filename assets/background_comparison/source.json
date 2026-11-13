@@ -1,0 +1,21 @@
+{
+  "source": "Sumiro adapted hill layer, Blender MCP export",
+  "source_blend": "../../artifacts/background-comparison-review/rejected-full-ink/assets/island_blender/nameless_island.blend",
+  "objects": [
+    "Sumiro_Hill_00_NF",
+    "Sumiro_Hill_01_NXM",
+    "Sumiro_Hill_02_EM",
+    "Sumiro_Hill_03_NXL",
+    "Sumiro_Hill_04_NL",
+    "Sumiro_Hill_05_NA4",
+    "Sumiro_Hill_06_NXR",
+    "Sumiro_Hill_07_NA3",
+    "Sumiro_Hill_08_WXA",
+    "Sumiro_Hill_09_WA1",
+    "Sumiro_Hill_10_WR",
+    "Sumiro_Hill_11_ER",
+    "Sumiro_Hill_12_NA0",
+    "Sumiro_Hill_13_NA2"
+  ],
+  "provenance": "../sumiro/PROVENANCE.md"
+}

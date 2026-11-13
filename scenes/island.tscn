@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/island.gd" id="1"]
+[ext_resource type="PackedScene" path="res://assets/island_blender/nameless_island.glb" id="2"]
+[ext_resource type="PackedScene" path="res://assets/forest_spring_3d/forest_spring.glb" id="3"]
+
+[node name="Island" type="Node3D"]
+script = ExtResource("1")
+
+[node name="World3D" parent="." instance=ExtResource("2")]
+
+[node name="EastSpring" parent="World3D" instance=ExtResource("3")]

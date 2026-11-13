@@ -1,0 +1,14 @@
+{
+  "font": "Cubic 11",
+  "upstream": "https://github.com/ACh-K/Cubic-11",
+  "distribution": "https://github.com/TakWolf/fusion-pixel-font/tree/master/assets/fonts/cubic-11",
+  "source_sha256": "d28e92846e00c3696b30d950d4eddf445dd90b2a970e67cdb629796c1997ef67",
+  "conversion": "Lossless WOFF2 container decompression to TTF with fontTools; outlines unchanged.",
+  "license": "OFL.txt contains upstream notices and licenses",
+  "use": "Overhead opening title only",
+  "distributed_version": {
+    "repository_url": "https://github.com/ACh-K/Cubic-11",
+    "version": "1.500",
+    "version_url": "https://github.com/ACh-K/Cubic-11/releases/tag/v1.500"
+  }
+}

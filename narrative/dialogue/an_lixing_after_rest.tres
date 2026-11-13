@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_content.gd" id="1_content"]
+[ext_resource type="Texture2D" path="res://assets/ui/portraits/an_lixing_shoulders.png" id="2_portrait"]
+
+[resource]
+script = ExtResource("1_content")
+dialogue_id = &"an_lixing_after_rest"
+speaker_name = "蕭野"
+portrait = ExtResource("2_portrait")
+original_text = "昨天竟然一不小心睡着了，太阳都晒屁股了，赶紧去找师傅吧，不然又要被他老人家说了。"
+pages = PackedStringArray("昨天竟然一不小心睡著了，\n太陽都曬屁股了，", "趕緊去找師傅吧，\n不然又要被他老人家說了。")

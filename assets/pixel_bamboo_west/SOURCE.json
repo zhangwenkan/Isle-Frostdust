@@ -1,0 +1,24 @@
+{
+  "game": "Wandering Sword / 逸剑风云决",
+  "purpose": "User-authorized local island bamboo study, 2026-11-09",
+  "original_art": true,
+  "license": "Extracted installed-game assets; no redistribution license supplied",
+  "textures": [
+    {
+      "file": "T_jn_zhuzi001.png",
+      "source": "D:\\Y 逸jian风yun决 v1.23.26 全DLC xg器\\WanderingSword\\analysis\\12_followup\\20261109-bamboo-scene\\exports\\JH\\MapEditor\\Tree\\Textures\\T_jn_zhuzi001.png",
+      "sha256": "fe808f66d0ccd094cf73423c5c49343a10566a2c493fc5dbf0bea7f8dd5d3f5c"
+    },
+    {
+      "file": "T_jn_zhuzi004.png",
+      "source": "D:\\Y 逸jian风yun决 v1.23.26 全DLC xg器\\WanderingSword\\analysis\\12_followup\\20261109-bamboo-scene\\exports\\JH\\MapEditor\\Tree\\Textures\\T_jn_zhuzi004.png",
+      "sha256": "30a38bf7fef820557288b78484626b92cabaed64bd016abb03e291d167f3e24d"
+    },
+    {
+      "file": "T_jn_zhuzi005.png",
+      "source": "D:\\Y 逸jian风yun决 v1.23.26 全DLC xg器\\WanderingSword\\analysis\\12_followup\\20261109-bamboo-scene\\exports\\JH\\MapEditor\\Tree\\Textures\\T_jn_zhuzi005.png",
+      "sha256": "dd820655ec27c9ff0723a838c38ac2e5d9b1739af11bf940342a3c8185b218a2"
+    }
+  ],
+  "mesh_source": "D:\\Y 逸jian风yun决 v1.23.26 全DLC xg器\\WanderingSword\\analysis\\12_followup\\20261109-bamboo-scene\\scene-manifest.json"
+}

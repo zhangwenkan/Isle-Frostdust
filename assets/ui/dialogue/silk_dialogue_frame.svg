@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="194" viewBox="0 0 1120 194">
+<defs>
+  <linearGradient id="paper" x2="0" y2="1"><stop stop-color="#e9dfc6"/><stop offset=".48" stop-color="#e0d1ae"/><stop offset="1" stop-color="#cbbc98"/></linearGradient>
+  <linearGradient id="rim" x2="0" y2="1"><stop stop-color="#535545"/><stop offset=".34" stop-color="#292f29"/><stop offset="1" stop-color="#41382c"/></linearGradient>
+  <linearGradient id="bronze" x2="0" y2="1"><stop stop-color="#c7b286"/><stop offset=".46" stop-color="#a08b62"/><stop offset="1" stop-color="#6c573a"/></linearGradient>
+  <linearGradient id="wash"><stop stop-color="#8c8165" stop-opacity=".22"/><stop offset=".36" stop-color="#b4aa8d" stop-opacity="0"/><stop offset="1" stop-color="#85795e" stop-opacity=".12"/></linearGradient>
+  <pattern id="weave" width="6" height="6" patternUnits="userSpaceOnUse"><path d="M0 1H6M1 0V6" stroke="#685638" stroke-opacity=".045" stroke-width=".5"/></pattern>
+  <g id="corner">
+    <path d="M0 42V8L8 0H60L51 8H19L8 19V42Z" fill="#343b31" stroke="#a99671" stroke-width="1.4"/>
+    <path d="M6 38V18L18 6H49M13 30V20L22 12H35V20H23V29H32" fill="none" stroke="#c1ab7f" stroke-width="1.3"/>
+    <path d="M2 3L10 3L3 10Z" fill="#dbca9d"/>
+    <path d="M36 5L45 0L51 4L45 8Z" fill="#827152"/>
+  </g>
+  <g id="cloud" fill="none" stroke="#7d7055" stroke-width="1">
+    <path d="M0 40C17 40 13 20 34 20C34 6 57 4 65 17C84 8 102 24 95 38C105 48 126 36 131 26C147 12 170 24 162 40C152 57 140 37 149 34"/>
+    <path d="M11 45C30 45 25 29 40 29C46 17 59 23 59 30C65 42 79 37 78 27M27 52C50 52 49 45 67 45H126C140 45 144 53 159 53"/>
+  </g>
+</defs>
+<path d="M14 9H1106L1118 21V179L1106 191H14L2 179V21Z" fill="#0c201e" opacity=".28"/>
+<path d="M14 2H1106L1118 14V174L1106 186H14L2 174V14Z" fill="url(#rim)" stroke="#19251f" stroke-width="2"/>
+<path d="M19 7H1101L1112 18V170L1101 181H19L8 170V18Z" fill="none" stroke="url(#bronze)" stroke-width="2"/>
+<path d="M25 14H1095L1104 23V165L1095 174H25L16 165V23Z" fill="url(#paper)" stroke="#161c16" stroke-width="2"/>
+<path d="M25 14H1095L1104 23V165L1095 174H25L16 165V23Z" fill="url(#weave)"/>
+<path d="M25 14H1095L1104 23V165L1095 174H25L16 165V23Z" fill="url(#wash)"/>
+<path d="M29 20H1091L1097 26V162L1091 168H29L23 162V26Z" fill="none" stroke="#a28f68" stroke-width=".8"/>
+<path d="M270 20V168" stroke="#8b7957" stroke-opacity=".30"/>
+<path d="M274 32V156" stroke="#faf0cf" stroke-opacity=".45"/>
+<g opacity=".12"><use href="#cloud" transform="translate(900 77) scale(1.05)"/><use href="#cloud" transform="translate(755 108) scale(.8)"/></g>
+<path d="M450 179H520L529 175H543L551 179H569L577 175H591L600 179H670" fill="none" stroke="#baa477" stroke-width="1"/>
+<path d="M555 179L560 175L565 179L560 183Z" fill="#b9a17a"/>
+<use href="#corner" transform="translate(7 7)"/>
+<use href="#corner" transform="translate(1113 7) scale(-1 1)"/>
+<use href="#corner" transform="translate(7 181) scale(1 -1)"/>
+<use href="#corner" transform="translate(1113 181) scale(-1 -1)"/>
+
+</svg>

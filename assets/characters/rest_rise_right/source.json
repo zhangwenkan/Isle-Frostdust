@@ -1,0 +1,57 @@
+{
+  "source": "artifacts\\interaction-rest-rise-review\\review-chin\\hero",
+  "frames": 103,
+  "fps": 24,
+  "canvas": [
+    832,
+    768
+  ],
+  "pixel_size": 0.0037,
+  "sprite_offset": [
+    0,
+    340
+  ],
+  "frame_pixels_unchanged": true,
+  "files": [
+    {
+      "file": "rest_rise_chin.tres",
+      "sha256": "e1c9315e94953aac6fa92faa5db9372bc6c1e1c69b43e73ad770e6effdaf4365"
+    },
+    {
+      "file": "atlases\\sheet_00.png",
+      "sha256": "3286b1d8d50439cf2c040516522c6de7f00d33c3d8d8ee132cbcf6c09d314c1b"
+    },
+    {
+      "file": "atlases\\sheet_01.png",
+      "sha256": "827f1fb4455775ddc929abfb29a6d9573a14a64138d8a2f59be305089e672b1a"
+    },
+    {
+      "file": "atlases\\sheet_02.png",
+      "sha256": "762cb2a01bb55d27d3fd25414ab84098c055bb00a615c461b8f1c46457e765b3"
+    },
+    {
+      "file": "atlases\\sheet_03.png",
+      "sha256": "de022fb63329d4e83e3bc62bed245d387bd12a8430fd55aea9c952f093391d3b"
+    },
+    {
+      "file": "atlases\\sheet_04.png",
+      "sha256": "5f22c6dd92c72073420eb304a927a845131a418a000c6ff3c8b2344b4381dbed"
+    },
+    {
+      "file": "atlases\\sheet_05.png",
+      "sha256": "d29b0a4fa64bdc0f8abf2d868b2970469807285f0d519eab6df6880188b04176"
+    },
+    {
+      "file": "atlases\\sheet_06.png",
+      "sha256": "b4c4c0c6005447593c568668a66baf99c55036359515f4cf908d8fd316e63e66"
+    },
+    {
+      "file": "atlases\\sheet_07.png",
+      "sha256": "4b22726c1e22b495ad7fdab0276a85c79ef6e4f49a8afc105c1d691623efd7b6"
+    },
+    {
+      "file": "atlases\\sheet_08.png",
+      "sha256": "384cdae9425502cda7e1c5fc58ae1df6ee5aa49be1eded6a9b705541eccaafe9"
+    }
+  ]
+}

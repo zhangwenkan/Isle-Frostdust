@@ -1,0 +1,1 @@
+Original project texture, authored by tools/paint_shore_facets.py. Structure informed by inspection of Wandering Sword shore meshes; no pixels or mesh data copied from that game. Face-specific color planes, short ledges, restrained vertical grain and turf overlap. Not hand-painted by a human artist.

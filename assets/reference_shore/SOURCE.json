@@ -1,0 +1,13 @@
+{
+  "status": "local reference adaptation for user review, not original project art",
+  "source_game": "Wandering Sword / 逸剑风云决",
+  "source_library": "D:\\Y 逸jian风yun决 v1.23.26 全DLC xg器\\WanderingSword\\analysis\\12_followup\\20261109-bamboo-scene",
+  "source_texture": "D:\\Y 逸jian风yun决 v1.23.26 全DLC xg器\\WanderingSword\\analysis\\12_followup\\20261109-bamboo-scene\\exports\\JH\\MapEditor\\NewCliff\\Textures\\T_XuanyaNew001.png",
+  "sha256": "2139dc34d93deacff99535df9e90de067b50a77f720af01f4369d07aec5d20a7",
+  "meshes": [
+    "SM_XYNJiangnan017",
+    "SM_XYNJiangnan018"
+  ],
+  "rights": "Original game assets belong to their original rights holders. No redistribution license is recorded.",
+  "modifications": "Blender MCP fits original geometry to existing cape/shore boundary and adjusts proportions; original UV/color texture retained. Godot balances color for existing island lighting."
+}

@@ -1,0 +1,11 @@
+I.Ngaan / 一點顏體
+Version: Version 1.004
+
+(C) Dr. Hann-Tzong Wang, 1999-2004; (C) Ichiten Fonts Project, 2013-14. This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public Linense as published by the Free Software Foundation; either version 2 of the License, or any later version.
+
+GNU General Public License v2.0 or above.
+http://www.gnu.org/licenses/gpl.txt
+
+Source: https://github.com/wordshub/free-font/blob/master/assets/font/中文/刻石录系列/I.顏體.ttf
+Font binary is unmodified. Pixel rendering is configured in the Godot importer.
+SHA256: 7aba8f5bb77ea7e0fc37c0e5e709bd8e1d49b44a3c91eb503f426562602f9c2a

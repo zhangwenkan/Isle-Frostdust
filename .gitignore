@@ -1,3 +1,57 @@
+# Local Godot cache and exports
+.godot/
+*.tmp
+export.cfg
+export_presets.cfg
+
+# Review captures, generated experiments, and backups stay local.
+/artifacts/
+
+# Core-source repository: retain asset configuration and provenance,
+# while model, texture, animation-atlas, and font binaries stay local.
+/assets/**
+!/assets/**/
+!/assets/**/*.md
+!/assets/**/*.txt
+!/assets/**/*.json
+!/assets/**/*.tres
+!/assets/**/*.tscn
+!/assets/**/*.import
+!/assets/**/*.svg
+
+# Godot .import sidecars above preserve authored import settings;
+# generated import data is already excluded through .godot/.
+*.blend
+*.blend[0-9]*
+*.glb
+*.gltf
+*.fbx
+*.obj
+*.mp4
+*.mov
+*.webm
+*.gif
+*.apng
+*.zip
+*.7z
+*.bak
+/tests/walk_forge/walk_atlas_256.png
+
+# Tool caches and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db
+
+# Existing Phaser/Vite prototype
 node_modules/
 dist/
 .vscode/
+dist-ssr/
+*.local

@@ -1,0 +1,68 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_main"]
+[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="2_player"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_main")
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="Player" parent="World" instance=ExtResource("2_player")]
+position = Vector2(320, 192)
+scale = Vector2(2, 2)
+
+[node name="Hud" type="CanvasLayer" parent="."]
+
+[node name="Root" type="Control" parent="Hud"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="SafeArea" type="MarginContainer" parent="Hud/Root"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 16
+
+[node name="Layout" type="VBoxContainer" parent="Hud/Root/SafeArea"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 4
+
+[node name="Title" type="Label" parent="Hud/Root/SafeArea/Layout"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.93, 0.85, 0.65, 1)
+theme_override_font_sizes/font_size = 20
+text = "孤屿霜尘 · 像素原型"
+
+[node name="Hint" type="Label" parent="Hud/Root/SafeArea/Layout"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.69, 0.74, 0.78, 1)
+theme_override_font_sizes/font_size = 16
+text = "WASD 移动 · 当前为基础验证场"
+
+[node name="Spacer" type="Control" parent="Hud/Root/SafeArea/Layout"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="Version" type="Label" parent="Hud/Root/SafeArea/Layout"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.36, 0.44, 0.51, 1)
+theme_override_font_sizes/font_size = 14
+text = "Godot 4.x"
+horizontal_alignment = 2

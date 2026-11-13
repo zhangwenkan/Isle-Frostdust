@@ -1,0 +1,75 @@
+<div id="island-surface-review">
+  <div class="viz-controls">
+    <label class="form-label">查看位置
+      <select class="form-select" id="island-surface-view">
+        <option value="overview">主角附近</option>
+        <option value="rock">岩面 · 局部</option>
+        <option value="grass">草地 · 局部</option>
+        <option value="bark">树皮 · 局部</option>
+        <option value="wood">木板 · 局部</option>
+      </select>
+    </label>
+  </div>
+  <div class="surface-labels"><span>调整前</span><span>调整后</span></div>
+  <div class="surface-photo" role="img" aria-label="同一镜头的材质前后对比，左侧调整前，右侧调整后">
+    <img id="island-surface-after" alt="调整后的海岛材质" draggable="false">
+    <img id="island-surface-before" alt="调整前的海岛材质" draggable="false">
+    <div class="surface-divider" aria-hidden="true"></div>
+  </div>
+  <label class="form-label" for="island-surface-slider">对比分界 <output class="tabular-nums" id="island-surface-value">50%</output></label>
+  <input class="form-range" id="island-surface-slider" type="range" min="0" max="100" value="50" aria-label="拖动查看调整前后">
+  <div class="text-small text-muted" id="island-surface-status" aria-live="polite">主角附近 · 相同镜头与光照</div>
+</div>
+<style>
+  #island-surface-review {display:grid;gap:calc(var(--font-size-base)*.6)}
+  #island-surface-review .surface-labels {display:flex;justify-content:space-between;color:var(--foreground)}
+  #island-surface-review .surface-photo {position:relative;overflow:hidden;touch-action:pan-y}
+  #island-surface-review .surface-photo img {display:block;width:100%;height:auto;user-select:none}
+  #island-surface-review #island-surface-before {position:absolute;inset:0;clip-path:inset(0 50% 0 0)}
+  #island-surface-review .surface-divider {position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--foreground);pointer-events:none}
+  #island-surface-review .surface-photo.detail img {image-rendering:pixelated}
+  #island-surface-review .surface-photo.detail {max-width:736px}
+</style>
+<script>
+(() => {
+  const root=document.getElementById('island-surface-review');
+  const images=SURFACE_IMAGE_DATA;
+  const select=root.querySelector('#island-surface-view');
+  const slider=root.querySelector('#island-surface-slider');
+  const before=root.querySelector('#island-surface-before');
+  const after=root.querySelector('#island-surface-after');
+  const value=root.querySelector('#island-surface-value');
+  const divider=root.querySelector('.surface-divider');
+  const photo=root.querySelector('.surface-photo');
+  const status=root.querySelector('#island-surface-status');
+  function divide() {
+    const position=Number(slider.value);
+    before.style.clipPath=`inset(0 ${100-position}% 0 0)`;
+    divider.style.left=`${position}%`;
+    value.value=`${position}%`;
+  }
+  function show() {
+    const item=images[select.value];
+    before.src=item.before;after.src=item.after;
+    photo.classList.toggle('detail',select.value!=='overview');
+    status.textContent=`${item.label} · 相同镜头与光照`;
+    divide();
+  }
+  function restore(state) {
+    const saved=state?.privateContent;
+    if(saved && images[saved.view])select.value=saved.view;
+    if(saved && Number.isFinite(saved.position))slider.value=Math.max(0,Math.min(100,saved.position));
+    show();
+  }
+  function save() {
+    if(window.openai?.setWidgetState)window.openai.setWidgetState({modelContent:{view:images[select.value].label},privateContent:{view:select.value,position:Number(slider.value)}}).catch(()=>{});
+  }
+  select.addEventListener('change',()=>{show();save()});
+  slider.addEventListener('input',divide);
+  slider.addEventListener('change',save);
+  restore(window.openai?.widgetState);
+  window.addEventListener('openai:set_globals',event=>{
+    if(event.detail?.globals?.widgetState)restore(event.detail.globals.widgetState);
+  });
+})();
+</script>

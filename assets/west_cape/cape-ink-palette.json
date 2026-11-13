@@ -1,0 +1,21 @@
+{
+  "ground_extent_godot_xz": [
+    -26,
+    -11,
+    -6,
+    6
+  ],
+  "grass_base_srgb": [
+    111,
+    137,
+    90
+  ],
+  "path_base_srgb": [
+    165,
+    151,
+    119
+  ],
+  "grass_clumps": 1505,
+  "reference": "assets/colored_ink_sample/ground_brush_color.png",
+  "source": "Same editable pressure strokes and world-scale density as tools/paint_colored_ink_sample.py; no rock texture changes."
+}

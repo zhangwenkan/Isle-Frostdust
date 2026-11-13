@@ -1,0 +1,375 @@
+{
+  "source": "Project bamboo_depth Blender-baked color atlases",
+  "mapping": {
+    "x": [
+      -24,
+      6
+    ],
+    "height": [
+      1.6,
+      15.6
+    ]
+  },
+  "placements": [
+    {
+      "layer": 0,
+      "x": -25.0,
+      "height": 7.74,
+      "variant": "slender_a"
+    },
+    {
+      "layer": 0,
+      "x": -23.462000445491405,
+      "height": 8.843577912933485,
+      "variant": "slender_b"
+    },
+    {
+      "layer": 0,
+      "x": -22.461329864486437,
+      "height": 8.093375163994667,
+      "variant": "cluster_a"
+    },
+    {
+      "layer": 0,
+      "x": -21.32219552375866,
+      "height": 6.749575861770399,
+      "variant": "slender_c"
+    },
+    {
+      "layer": 0,
+      "x": -19.681412795726736,
+      "height": 7.069482486408258,
+      "variant": "cluster_b"
+    },
+    {
+      "layer": 0,
+      "x": -18.308363092970364,
+      "height": 8.515718648431475,
+      "variant": "slender_a"
+    },
+    {
+      "layer": 0,
+      "x": -17.36796992502245,
+      "height": 8.658909313926472,
+      "variant": "slender_b"
+    },
+    {
+      "layer": 0,
+      "x": -16.048352906936888,
+      "height": 7.258524037743564,
+      "variant": "cluster_a"
+    },
+    {
+      "layer": 0,
+      "x": -14.393801164434441,
+      "height": 6.666917931138995,
+      "variant": "slender_c"
+    },
+    {
+      "layer": 0,
+      "x": -13.204782262448651,
+      "height": 7.877865830502785,
+      "variant": "cluster_b"
+    },
+    {
+      "layer": 0,
+      "x": -12.230735398051094,
+      "height": 8.857227896620172,
+      "variant": "slender_a"
+    },
+    {
+      "layer": 0,
+      "x": -10.735759766195407,
+      "height": 7.959880175973664,
+      "variant": "slender_b"
+    },
+    {
+      "layer": 0,
+      "x": -9.160049703965758,
+      "height": 6.693179631777466,
+      "variant": "cluster_a"
+    },
+    {
+      "layer": 0,
+      "x": -8.126072782901776,
+      "height": 7.184918915274647,
+      "variant": "slender_c"
+    },
+    {
+      "layer": 0,
+      "x": -7.0332316269785276,
+      "height": 8.609078618368411,
+      "variant": "cluster_b"
+    },
+    {
+      "layer": 0,
+      "x": -5.41382599503468,
+      "height": 8.57336755248715,
+      "variant": "slender_a"
+    },
+    {
+      "layer": 0,
+      "x": -3.9889744652038255,
+      "height": 7.137772858157768,
+      "variant": "slender_b"
+    },
+    {
+      "layer": 0,
+      "x": -3.04055296159383,
+      "height": 6.713794123624282,
+      "variant": "cluster_a"
+    },
+    {
+      "layer": 0,
+      "x": -1.7748065842795808,
+      "height": 8.013627171140918,
+      "variant": "slender_c"
+    },
+    {
+      "layer": 0,
+      "x": -0.11440130650410776,
+      "height": 8.853823656092143,
+      "variant": "cluster_b"
+    },
+    {
+      "layer": 0,
+      "x": 1.1269798446688057,
+      "height": 7.823028768163316,
+      "variant": "slender_a"
+    },
+    {
+      "layer": 0,
+      "x": 2.0816799987599546,
+      "height": 6.652762871439923,
+      "variant": "slender_b"
+    },
+    {
+      "layer": 0,
+      "x": 3.5292788156399397,
+      "height": 7.308828527906759,
+      "variant": "cluster_a"
+    },
+    {
+      "layer": 0,
+      "x": 5.136544071709754,
+      "height": 8.689172305156934,
+      "variant": "slender_c"
+    },
+    {
+      "layer": 0,
+      "x": 6.209766381763971,
+      "height": 8.475104629021368,
+      "variant": "cluster_b"
+    },
+    {
+      "layer": 0,
+      "x": 7.2609392392512975,
+      "height": 7.026214535943537,
+      "variant": "slender_a"
+    },
+    {
+      "layer": 1,
+      "x": -24.798046963646105,
+      "height": 7.052119671900259,
+      "variant": "cluster_a"
+    },
+    {
+      "layer": 1,
+      "x": -23.04742882874388,
+      "height": 7.130773094145749,
+      "variant": "slender_c"
+    },
+    {
+      "layer": 1,
+      "x": -21.528384497733484,
+      "height": 5.965082260612834,
+      "variant": "cluster_b"
+    },
+    {
+      "layer": 1,
+      "x": -19.4937190010253,
+      "height": 5.5131645815902175,
+      "variant": "slender_a"
+    },
+    {
+      "layer": 1,
+      "x": -17.360349597110098,
+      "height": 6.5341474773643835,
+      "variant": "slender_b"
+    },
+    {
+      "layer": 1,
+      "x": -15.768036268910834,
+      "height": 7.3129926836613635,
+      "variant": "cluster_a"
+    },
+    {
+      "layer": 1,
+      "x": -14.135002654996315,
+      "height": 6.541402739011113,
+      "variant": "slender_c"
+    },
+    {
+      "layer": 1,
+      "x": -11.971406134606953,
+      "height": 5.5154877789324175,
+      "variant": "cluster_b"
+    },
+    {
+      "layer": 1,
+      "x": -9.985250118686277,
+      "height": 5.958570906788263,
+      "variant": "slender_a"
+    },
+    {
+      "layer": 1,
+      "x": -8.483932545108825,
+      "height": 7.126364905160803,
+      "variant": "slender_b"
+    },
+    {
+      "layer": 1,
+      "x": -6.680236939225202,
+      "height": 7.057219485599553,
+      "variant": "cluster_a"
+    },
+    {
+      "layer": 1,
+      "x": -4.469622380315483,
+      "height": 5.867284527634968,
+      "variant": "slender_c"
+    },
+    {
+      "layer": 1,
+      "x": -2.6662443871557584,
+      "height": 5.555402512716322,
+      "variant": "cluster_b"
+    },
+    {
+      "layer": 1,
+      "x": -1.1648449682767226,
+      "height": 6.645470160111141,
+      "variant": "slender_a"
+    },
+    {
+      "layer": 1,
+      "x": 0.8216075697348688,
+      "height": 7.3064012354984715,
+      "variant": "slender_b"
+    },
+    {
+      "layer": 1,
+      "x": 2.98504583434494,
+      "height": 6.427969417723817,
+      "variant": "cluster_a"
+    },
+    {
+      "layer": 1,
+      "x": 4.617823706940248,
+      "height": 5.485756899471148,
+      "variant": "slender_c"
+    },
+    {
+      "layer": 1,
+      "x": 6.210361192640687,
+      "height": 6.062484144099426,
+      "variant": "cluster_b"
+    },
+    {
+      "layer": 1,
+      "x": 8.343928574955344,
+      "height": 7.189369699264347,
+      "variant": "slender_a"
+    },
+    {
+      "layer": 2,
+      "x": -24.781768617561838,
+      "height": 6.385656324051453,
+      "variant": "cluster_b"
+    },
+    {
+      "layer": 2,
+      "x": -22.82716067381804,
+      "height": 5.6857578328730485,
+      "variant": "slender_a"
+    },
+    {
+      "layer": 2,
+      "x": -20.585463477013434,
+      "height": 4.808208245995887,
+      "variant": "slender_b"
+    },
+    {
+      "layer": 2,
+      "x": -17.92504743036979,
+      "height": 5.227107792249904,
+      "variant": "cluster_a"
+    },
+    {
+      "layer": 2,
+      "x": -15.659619873705978,
+      "height": 6.238792626054326,
+      "variant": "slender_c"
+    },
+    {
+      "layer": 2,
+      "x": -13.711126982393202,
+      "height": 6.143843287453751,
+      "variant": "cluster_b"
+    },
+    {
+      "layer": 2,
+      "x": -11.28597502773684,
+      "height": 5.101754856670867,
+      "variant": "slender_a"
+    },
+    {
+      "layer": 2,
+      "x": -8.666718199665208,
+      "height": 4.8630184936919445,
+      "variant": "slender_b"
+    },
+    {
+      "layer": 2,
+      "x": -6.574139123448135,
+      "height": 5.82866148239914,
+      "variant": "cluster_a"
+    },
+    {
+      "layer": 2,
+      "x": -4.539945863457524,
+      "height": 6.376605057207493,
+      "variant": "slender_c"
+    },
+    {
+      "layer": 2,
+      "x": -1.9640294696808915,
+      "height": 5.586418326131466,
+      "variant": "cluster_b"
+    },
+    {
+      "layer": 2,
+      "x": 0.5306766538805051,
+      "height": 4.785450146165734,
+      "variant": "slender_a"
+    },
+    {
+      "layer": 2,
+      "x": 2.504586636050854,
+      "height": 5.319159959180281,
+      "variant": "slender_b"
+    },
+    {
+      "layer": 2,
+      "x": 4.693910319373615,
+      "height": 6.291026623511516,
+      "variant": "cluster_a"
+    },
+    {
+      "layer": 2,
+      "x": 7.348520405308805,
+      "height": 6.068516896928654,
+      "variant": "slender_c"
+    }
+  ]
+}

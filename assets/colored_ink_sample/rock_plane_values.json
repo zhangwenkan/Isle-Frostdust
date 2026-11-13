@@ -1,0 +1,10 @@
+{
+  "base_srgb": [
+    142,
+    153,
+    146
+  ],
+  "surface_scratch_count": 0,
+  "strategy": "Shared pigment; shape-normal illumination, two selected pale edge accents and one foot contact",
+  "source": "Original authored texture, no reference pixels"
+}

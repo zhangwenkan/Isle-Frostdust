@@ -1,0 +1,74 @@
+[
+  {
+    "source": "D:\\steam\\steamapps\\common\\I Just Wanted to Fish Demo\\analysis\\exported_all\\textures\\T_Palm_Normal_501.png",
+    "output": "T_Palm_Normal_501_OpenGL.png",
+    "method": "Decode Unity AG-packed tangent normal to RGB OpenGL normal; no invented surface detail",
+    "source_sha256": "2cccfbcfd3b27df93c459caa8b876788cb3d94114a8fbf761e0ee39b6e25142a"
+  },
+  {
+    "source": "D:\\steam\\steamapps\\common\\I Just Wanted to Fish Demo\\analysis\\exported_all\\textures\\T_Rock_A_Normal_494.png",
+    "output": "T_Rock_A_Normal_494_OpenGL.png",
+    "method": "Decode Unity AG-packed tangent normal to RGB OpenGL normal; no invented surface detail",
+    "source_sha256": "c896699519382f6c0c15e392810974107192d938162c4bb0e9683cacef1a3532"
+  },
+  {
+    "source": "D:\\steam\\steamapps\\common\\I Just Wanted to Fish Demo\\analysis\\exported_all\\textures\\T_Rock_B_Normal_534.png",
+    "output": "T_Rock_B_Normal_534_OpenGL.png",
+    "method": "Decode Unity AG-packed tangent normal to RGB OpenGL normal; no invented surface detail",
+    "source_sha256": "5a85bbbb3510b57096cb2a5fe4f587b248d9b37f5f5ab8c5c8a8bd5cfc6c1fb2"
+  },
+  {
+    "source": "D:\\steam\\steamapps\\common\\I Just Wanted to Fish Demo\\analysis\\exported_all\\textures\\T_Rock_C_Normal_401.png",
+    "output": "T_Rock_C_Normal_401_OpenGL.png",
+    "method": "Decode Unity AG-packed tangent normal to RGB OpenGL normal; no invented surface detail",
+    "source_sha256": "d1c4c56fad033262389ced27066151bba10b785248cc7ca934ac6fcbdc475319"
+  },
+  {
+    "source": "D:\\steam\\steamapps\\common\\I Just Wanted to Fish Demo\\analysis\\exported_all\\textures\\T_Rock_D_Normal_435.png",
+    "output": "T_Rock_D_Normal_435_OpenGL.png",
+    "method": "Decode Unity AG-packed tangent normal to RGB OpenGL normal; no invented surface detail",
+    "source_sha256": "74a9950ee1ced476a95cee1e78736c21cdf8f89f0ba2f5dc812e22336d216209"
+  },
+  {
+    "source": "D:\\steam\\steamapps\\common\\I Just Wanted to Fish Demo\\analysis\\exported_all\\textures\\T_Palm_Albedo_399.png",
+    "output": "T_Palm_Albedo_399.png",
+    "method": "Unmodified reference UV atlas",
+    "source_sha256": "7f1521f13354fbd37a55f290998732fcb16746dbae1770bd7493cfe0f55de813"
+  },
+  {
+    "source": "D:\\steam\\steamapps\\common\\I Just Wanted to Fish Demo\\analysis\\exported_all\\textures\\T_Terrain_Albedo_Demo_542.png",
+    "output": "Island_Ground_Study.png",
+    "method": "Reuse grass crop (0,0,1400,760) once across island bounds; match existing path with softened irregular edges; restrained saturation",
+    "source_sha256": "cd1bcf814c05107f3f9b2633e1ac4b626b5a2fc7752093ca3e030694e1b78668"
+  },
+  {
+    "source": "D:\\steam\\steamapps\\common\\I Just Wanted to Fish Demo\\analysis\\exported_all\\textures\\T_Terrain_Normal_Demo_436.png",
+    "output": "Island_Ground_Normal.png",
+    "method": "Decode matching Unity normal crop; flatten on path; same mapping as ground color",
+    "source_sha256": "4ec8541b1d5714a0ebb2f172f460759ded7f37d13113b1cf5a0e904a6d7d0ecd"
+  },
+  {
+    "source": "D:\\steam\\steamapps\\common\\I Just Wanted to Fish Demo\\analysis\\exported_all\\meshes\\Palm_Bent_4201.obj",
+    "mesh": "Palm_Bent_4201.obj",
+    "method": "Imported LOD0 only inside Blender MCP, using original Unity submesh index ranges",
+    "source_sha256": "51349d58d2abce336b4df9fa9834fa77cca5f1d3e29c967b84c796e65fa9ae25"
+  },
+  {
+    "source": "D:\\steam\\steamapps\\common\\I Just Wanted to Fish Demo\\analysis\\exported_all\\meshes\\Palm_Tall_3358.obj",
+    "mesh": "Palm_Tall_3358.obj",
+    "method": "Imported LOD0 only inside Blender MCP, using original Unity submesh index ranges",
+    "source_sha256": "f27319d444ac1b856f64e5b09408fae8c073eded934c76a6b2d2211f6a2f1daf"
+  },
+  {
+    "source": "D:\\steam\\steamapps\\common\\I Just Wanted to Fish Demo\\analysis\\exported_all\\meshes\\Palm_Short_4522.obj",
+    "mesh": "Palm_Short_4522.obj",
+    "method": "Imported LOD0 only inside Blender MCP, using original Unity submesh index ranges",
+    "source_sha256": "0eb1fd909bfc22cf14a4a851c97e9bec9c8ff6d4b01d366bb4ed32888368fa27"
+  },
+  {
+    "source": "D:\\steam\\steamapps\\common\\I Just Wanted to Fish Demo\\analysis\\exported_all\\meshes\\Palm_Young_1034.obj",
+    "mesh": "Palm_Young_1034.obj",
+    "method": "Imported LOD0 only inside Blender MCP, using original Unity submesh index ranges",
+    "source_sha256": "83de6a767474e4f1f626854802c4073450b01cd54656f3c982bbe81de86971d0"
+  }
+]

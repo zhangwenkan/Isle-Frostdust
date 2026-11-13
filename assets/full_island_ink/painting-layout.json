@@ -1,0 +1,41 @@
+{
+  "ground": [
+    {
+      "name": "east_ground",
+      "extent_xz": [
+        -1,
+        29,
+        -7,
+        7
+      ],
+      "size": [
+        3584,
+        1536
+      ],
+      "grass_groups": 3516,
+      "road": true
+    },
+    {
+      "name": "valley_turf",
+      "extent_xz": [
+        -37,
+        7,
+        -44,
+        0
+      ],
+      "size": [
+        4096,
+        4096
+      ],
+      "grass_groups": 15722,
+      "road": false
+    }
+  ],
+  "rock_base_srgb": [
+    142,
+    153,
+    146
+  ],
+  "source": "Original editable pressure strokes and broad washes, extending the existing sample palette. No AI image generation or reference pixels.",
+  "rock_scratch_count": 0
+}

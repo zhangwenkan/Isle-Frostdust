@@ -1,0 +1,107 @@
+[
+  {
+    "source": "D:\\steam\\steamapps\\common\\I Just Wanted to Fish Demo\\analysis\\exported_all\\textures\\T_Leaves_619.png",
+    "file": "T_Leaves_619.png",
+    "sha256": "9e1b1f18901dd7644e14bceab08571392e8b038a6083d9659ebe71836cca46da"
+  },
+  {
+    "source": "D:\\steam\\steamapps\\common\\I Just Wanted to Fish Demo\\analysis\\exported_all\\textures\\T_Tree_A_Albedo_481.png",
+    "file": "T_Tree_A_Albedo_481.png",
+    "sha256": "62c378fb1969055a54bdee018330b683c582a9431bd8daf9926ac51b384202fd"
+  },
+  {
+    "source": "D:\\steam\\steamapps\\common\\I Just Wanted to Fish Demo\\analysis\\exported_all\\textures\\T_Tree_B_Albedo_475.png",
+    "file": "T_Tree_B_Albedo_475.png",
+    "sha256": "7b72330bb9b537eea8265f58b2ea776213368af0a500c1ec7650925f8a64acb6"
+  },
+  {
+    "source": "D:\\steam\\steamapps\\common\\I Just Wanted to Fish Demo\\analysis\\exported_all\\textures\\T_Tree_A_Normal_612.png",
+    "file": "T_Tree_A_Normal_612.png",
+    "sha256": "c1249d8a53ba1d187c86ff4efe898fbba6df8ba6c4ac43fbf7c4b3971547f620"
+  },
+  {
+    "source": "D:\\steam\\steamapps\\common\\I Just Wanted to Fish Demo\\analysis\\exported_all\\textures\\T_Tree_B_Normal_694.png",
+    "file": "T_Tree_B_Normal_694.png",
+    "sha256": "2789dbd905b97c13f6a3a7605292d3edeaa6de2a2b7474753263492a225ebedb"
+  },
+  {
+    "source": "D:\\steam\\steamapps\\common\\I Just Wanted to Fish Demo\\analysis\\exported_all\\textures\\T_Rock_A_Albedo_667.png",
+    "file": "T_Rock_A_Albedo_667.png",
+    "sha256": "e40f89b18e1bc5260a842fdbb3fa39b709d4a30563c490f551736fe77e0e4a28"
+  },
+  {
+    "source": "D:\\steam\\steamapps\\common\\I Just Wanted to Fish Demo\\analysis\\exported_all\\textures\\T_Rock_B_Albedo_460.png",
+    "file": "T_Rock_B_Albedo_460.png",
+    "sha256": "2ab58f586a31825d662e5c8c63573bb6a1ceff49d8f7ef0b34451354168398cb"
+  },
+  {
+    "source": "D:\\steam\\steamapps\\common\\I Just Wanted to Fish Demo\\analysis\\exported_all\\textures\\T_Rock_C_Albedo_564.png",
+    "file": "T_Rock_C_Albedo_564.png",
+    "sha256": "4b07fac64edfcaa0e620e92639fe11b1b705cc2181008dbad74df6032a65ba0a"
+  },
+  {
+    "source": "D:\\steam\\steamapps\\common\\I Just Wanted to Fish Demo\\analysis\\exported_all\\textures\\T_Rock_D_Albedo_540.png",
+    "file": "T_Rock_D_Albedo_540.png",
+    "sha256": "b5366ed917faaa78020a3ce60f54fd090ef01cd72da3cf85cfe3097a9f349ee0"
+  },
+  {
+    "source": "D:\\steam\\steamapps\\common\\I Just Wanted to Fish Demo\\analysis\\exported_all\\textures\\T_Rock_A_Normal_494.png",
+    "file": "T_Rock_A_Normal_494.png",
+    "sha256": "c896699519382f6c0c15e392810974107192d938162c4bb0e9683cacef1a3532"
+  },
+  {
+    "source": "D:\\steam\\steamapps\\common\\I Just Wanted to Fish Demo\\analysis\\exported_all\\textures\\T_Rock_B_Normal_534.png",
+    "file": "T_Rock_B_Normal_534.png",
+    "sha256": "5a85bbbb3510b57096cb2a5fe4f587b248d9b37f5f5ab8c5c8a8bd5cfc6c1fb2"
+  },
+  {
+    "source": "D:\\steam\\steamapps\\common\\I Just Wanted to Fish Demo\\analysis\\exported_all\\textures\\T_Rock_C_Normal_401.png",
+    "file": "T_Rock_C_Normal_401.png",
+    "sha256": "d1c4c56fad033262389ced27066151bba10b785248cc7ca934ac6fcbdc475319"
+  },
+  {
+    "source": "D:\\steam\\steamapps\\common\\I Just Wanted to Fish Demo\\analysis\\exported_all\\textures\\T_Rock_D_Normal_435.png",
+    "file": "T_Rock_D_Normal_435.png",
+    "sha256": "74a9950ee1ced476a95cee1e78736c21cdf8f89f0ba2f5dc812e22336d216209"
+  },
+  {
+    "source": "D:\\steam\\steamapps\\common\\I Just Wanted to Fish Demo\\analysis\\exported_all\\textures\\T_FloraAtlas_425.png",
+    "file": "T_FloraAtlas_425.png",
+    "sha256": "b02f19466e034e2e963258426e5410f1452d18d57eb9a2d53acf6fb59135f4b2"
+  },
+  {
+    "source": "D:\\steam\\steamapps\\common\\I Just Wanted to Fish Demo\\analysis\\exported_all\\meshes\\Tree_A_3939.obj",
+    "mesh": "Tree_A_3939.obj",
+    "sha256": "4662f1e4973cad3916a30afd540609f6e18c38b23a874196574a55e982e021ba"
+  },
+  {
+    "source": "D:\\steam\\steamapps\\common\\I Just Wanted to Fish Demo\\analysis\\exported_all\\meshes\\Tree_B_5160.obj",
+    "mesh": "Tree_B_5160.obj",
+    "sha256": "48f790a292f37163f33e87b527bbfcd1b5cd2a3a5e4f6f837da853daaa49bc7c"
+  },
+  {
+    "source": "D:\\steam\\steamapps\\common\\I Just Wanted to Fish Demo\\analysis\\exported_all\\meshes\\Rock_A_4518.obj",
+    "mesh": "Rock_A_4518.obj",
+    "sha256": "8da22b35e37f9282e7ebd27144b188e3527e3c4c78831c927c7741efc021d07a"
+  },
+  {
+    "source": "D:\\steam\\steamapps\\common\\I Just Wanted to Fish Demo\\analysis\\exported_all\\meshes\\Rock_B_4192.obj",
+    "mesh": "Rock_B_4192.obj",
+    "sha256": "473d2135075003a14660fb505931a58877def532e45ed34eafe9fce5ae8e417f"
+  },
+  {
+    "source": "D:\\steam\\steamapps\\common\\I Just Wanted to Fish Demo\\analysis\\exported_all\\meshes\\Rock_C_3602.obj",
+    "mesh": "Rock_C_3602.obj",
+    "sha256": "2d36f7a7bef09af3cb616568d070c1ac85fe1a5870cd4f3ca3b15271d2d5f1c4"
+  },
+  {
+    "source": "D:\\steam\\steamapps\\common\\I Just Wanted to Fish Demo\\analysis\\exported_all\\meshes\\Rock_D_6272.obj",
+    "mesh": "Rock_D_6272.obj",
+    "sha256": "38577dc747dd4778a148e25d2a380d77dc9561b5c7f833beb1ee3f18acf4f3d4"
+  },
+  {
+    "source": "D:\\steam\\steamapps\\common\\I Just Wanted to Fish Demo\\analysis\\exported_all\\meshes\\Flora_GrassTufts_3650.obj",
+    "mesh": "Flora_GrassTufts_3650.obj",
+    "sha256": "4194cba7e763ab999937007a373c70890f6d073d7708e16913fe4993f3f4e089"
+  }
+]

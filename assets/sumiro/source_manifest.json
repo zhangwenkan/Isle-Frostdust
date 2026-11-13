@@ -1,0 +1,447 @@
+[
+  {
+    "file": "asset-sheet.jpg",
+    "sha256": "19a0e8a88879bc8d939039e16b488a6443b6ca953472f35eaaca3f1615c6caea",
+    "bytes": 75091
+  },
+  {
+    "file": "backdrop-eS84m0Yx.js",
+    "sha256": "9c11e37c43e81b6a4b42d3e1e49181d42192be0bd62641879ffffe62fbb2d8d2",
+    "bytes": 18079
+  },
+  {
+    "file": "blender-inspection.json",
+    "sha256": "91c0e9169a658c80d4df768082d745f70fbc0e137cf53fa486ee84888b8475fa",
+    "bytes": 29218
+  },
+  {
+    "file": "cards-D1AvNuWX.js",
+    "sha256": "6f3b9a73ad97173aabb07abc29eb22d000b660cda23374f3f118937946162a0a",
+    "bytes": 1788
+  },
+  {
+    "file": "ch1_climb-6j5OfzXP.js",
+    "sha256": "a01d576eff177eba22242498708fa812b3f319e659b1d8e952eb77def9c7698a",
+    "bytes": 21064
+  },
+  {
+    "file": "chapters-BRoQf62n.js",
+    "sha256": "ca13fbfbbd01a10650e7c046aedc5336dd213b95fd2232b90d230013d00cad4a",
+    "bytes": 1618
+  },
+  {
+    "file": "constants-BjlLV5tN.js",
+    "sha256": "0ba79c657f36161aa92c589c8b8af5d8908c23dbe12118e25489f7d1fc8f3c1d",
+    "bytes": 1984
+  },
+  {
+    "file": "env_bridge_stairs-BdHdfeR8.js",
+    "sha256": "27ec9388cc292ac2fe423449664dee07b84712e2e2cab6a3607316ef3954148e",
+    "bytes": 3666
+  },
+  {
+    "file": "env_cliff-BDnk772X.js",
+    "sha256": "bf782f35f26bbd6713432c7439dbb7c24cbd27cf181c3ebb7a57553e2ab23860",
+    "bytes": 990
+  },
+  {
+    "file": "env_gate-DZ9dy3AD.js",
+    "sha256": "2397ffc9fde5c740eb0876b4f07bd2c1954299eebde1567814c09490143a01da",
+    "bytes": 2625
+  },
+  {
+    "file": "env_pines-CRDalYfK.js",
+    "sha256": "2ab6ce75b92661316ea4af48a3df45ff031453e1f05510619ed2ec52c2c79e7c",
+    "bytes": 10029
+  },
+  {
+    "file": "env_plateau-BBGQUF9c.js",
+    "sha256": "aacbb52cb5eb6e06c3ae9256b79d81c1301403f252a3b09e0fef97730e5cab81",
+    "bytes": 7764
+  },
+  {
+    "file": "exported-needle.png",
+    "sha256": "d808014b09bbf988c0c4631db50f8900e437b964d75c2083dd29ca4ace78fddd",
+    "bytes": 487576
+  },
+  {
+    "file": "fx_mist-DJm7IZBY.js",
+    "sha256": "30bd4bcfd7843bc553f6812bfc8d9f7dc1ae54fd008184e99266e3a71cf2cbc1",
+    "bytes": 10788
+  },
+  {
+    "file": "game-DnUBhPIZ.js",
+    "sha256": "4ca82f87395c3c7ccf6ea88c225f2b6776daaa5ee609500fc35bd430df8dab96",
+    "bytes": 14461
+  },
+  {
+    "file": "index-VEMJneSs.js",
+    "sha256": "6f5a102eeb9a241b3d6c99fd5982cf81ee8913214b80d34af744b98f7e493426",
+    "bytes": 858458
+  },
+  {
+    "file": "ink_material-UyOP6egx.js",
+    "sha256": "5ba5d109d14c22463a05f3cd1e828b95adb03938cd9af5e59b02993b43ec8fbd",
+    "bytes": 64182
+  },
+  {
+    "file": "layout-BFL31pIQ.js",
+    "sha256": "f16123ed1428db8d9e6bef1964aa524d6581f871492303215e58755df1b45115",
+    "bytes": 279
+  },
+  {
+    "file": "layout-BxJUyHwJ.js",
+    "sha256": "759c2fc5a6f283a994def490f2e4c11e7c0ed98bf1f56c24849e44bd8b55f854",
+    "bytes": 1224
+  },
+  {
+    "file": "layout-DibyQJX5.js",
+    "sha256": "b96785a3620cae1429a26c1a77bb629502fbb66ef77aa9430ae0961673de0c5f",
+    "bytes": 260
+  },
+  {
+    "file": "level-DkxhJmcq.js",
+    "sha256": "ee4bb49a961f88725ee1521ecd7679c3380a132591e8fef1a9f9b3f8bb149ac7",
+    "bytes": 22521
+  },
+  {
+    "file": "materials-CGuChJ0C.js",
+    "sha256": "25b2b543daa7e03b4fc1f04571ea60e89dce382eac329b4ff0b42e54b399a23f",
+    "bytes": 2556
+  },
+  {
+    "file": "needle-inspection.png",
+    "sha256": "a06a235cb6efbb5fa3092d135423f37a2fac3989df3daae0e3fb255a97939357",
+    "bytes": 590418
+  },
+  {
+    "file": "pines.glb",
+    "sha256": "ce7fee5a10fbc34adf50abca84d2e783fc4c1e52db4159c9da73b215c05c2a35",
+    "bytes": 1300396
+  },
+  {
+    "file": "render_pipeline-ClqUlkCf.js",
+    "sha256": "29a4621dc4b27f100479b3c6dfd22f842c52e48f9327b7536bad4aeb67ce1bc8",
+    "bytes": 16525
+  },
+  {
+    "file": "source.json",
+    "sha256": "8a46abd13ef4a21d57486ceb1fcd8de8bd44f8d5cc4db933b842bf6283d172a5",
+    "bytes": 280
+  },
+  {
+    "file": "tufts.png",
+    "sha256": "1b1794ffa08d6b94b61a4a0c70856767d23bdbded5e8e998dcb0e5fff9250f85",
+    "bytes": 2613059
+  },
+  {
+    "file": "assets/backdrop/far.webp",
+    "sha256": "5f9ccb8e6efa0d74988fba208294e8e2ab0cccb4258e7fae5beadb76a5838164",
+    "bytes": 421918
+  },
+  {
+    "file": "assets/backdrop/floor.jpg",
+    "sha256": "c111656f54a82a7d8f9a1d24743c3b8b088284fb53c11d5f3991bb6c31583c7a",
+    "bytes": 179591
+  },
+  {
+    "file": "assets/backdrop/hills.glb",
+    "sha256": "f3f23f5e433bfffb8657bfd825bf497316777b3606e168de08a490ee31eadd16",
+    "bytes": 1825784
+  },
+  {
+    "file": "assets/backdrop/hills.json",
+    "sha256": "fcdce93e22d75ae255a9c6fb93489db4df0b046bfec6dd3a00b475a0f8996257",
+    "bytes": 9623
+  },
+  {
+    "file": "assets/backdrop/hills.manifest.json",
+    "sha256": "064e5688aa4899c53ffede1f2794b62ca5334a6b0945b463c05f29eee112ddef",
+    "bytes": 43879
+  },
+  {
+    "file": "assets/backdrop/noise.jpg",
+    "sha256": "904472b515ea063046acfdc0a1f6ce9f1b335cac887bfe330a9e3c360e98b2f2",
+    "bytes": 331688
+  },
+  {
+    "file": "assets/backdrop/paper.jpg",
+    "sha256": "f09628f7839e1be43e7855b723871d3024580494ccd7dec29f902f2eab58f5ab",
+    "bytes": 1959527
+  },
+  {
+    "file": "assets/backdrop/ribbons.jpg",
+    "sha256": "9f01919646f86d535c4e58756ada833b6ac7cc3eba8dc19921d3abbf39c66e09",
+    "bytes": 400460
+  },
+  {
+    "file": "assets/backdrop/sky.jpg",
+    "sha256": "a346bd638edf5fe8ed5029d3098586cc4aecff5bd6fc992a76178d5bc79bb78e",
+    "bytes": 563294
+  },
+  {
+    "file": "assets/backdrop/sky_bank.jpg",
+    "sha256": "7a90287c69ea926afec84025748d8fbdbc166ada296fd89c7ca5501152e26e22",
+    "bytes": 19811
+  },
+  {
+    "file": "assets/backdrop/strips.json",
+    "sha256": "6191f23db5e71154c8dcba47b1db81ae9dd3fb4313fea7bc77653d334bbe9801",
+    "bytes": 883
+  },
+  {
+    "file": "assets/backdrop/hills/EL.webp",
+    "sha256": "aaacf1f4818880f9938cb659e331a6b5f64efc4a6d9c7701738f11b431b386d4",
+    "bytes": 31372
+  },
+  {
+    "file": "assets/backdrop/hills/EM.webp",
+    "sha256": "5fb828515ee53527868a6d06dcc4b072312065a944f66b5a9ced2c1946cfb4e5",
+    "bytes": 27636
+  },
+  {
+    "file": "assets/backdrop/hills/ER.webp",
+    "sha256": "3e4bb055582549ebfd3238227d92c42dcc56a0a1fec8f19f897e4bf4432b8cdc",
+    "bytes": 28348
+  },
+  {
+    "file": "assets/backdrop/hills/NA0.webp",
+    "sha256": "1a68bdbd0a8c9ea9605962639aa73a68e1e5b9252ce3de2ddc6516cb42bd044e",
+    "bytes": 30290
+  },
+  {
+    "file": "assets/backdrop/hills/NA1.webp",
+    "sha256": "dd9d509871eeb4776edde8095264b529831799e47e80d00bd2f64396562f5bc9",
+    "bytes": 78356
+  },
+  {
+    "file": "assets/backdrop/hills/NA2.webp",
+    "sha256": "7b6dfbe918c2673b8e1cb6bbffdeb96661eafc553ca29ffa96ab9bc8290a87e7",
+    "bytes": 52546
+  },
+  {
+    "file": "assets/backdrop/hills/NA3.webp",
+    "sha256": "f7523a6e414892bed91cf5ab7bf10eda3a6c10d33263ed5fc9a36fb0859b59a1",
+    "bytes": 21460
+  },
+  {
+    "file": "assets/backdrop/hills/NA4.webp",
+    "sha256": "97ab7dc72ebc588b82d81707117288f8130eaa02ddab3f91332115b620f1e074",
+    "bytes": 35902
+  },
+  {
+    "file": "assets/backdrop/hills/NF.webp",
+    "sha256": "9e49cf20e6baee92963aa0bd6810301956298b70c4f7fdae0249db3d3b8bdfa7",
+    "bytes": 27274
+  },
+  {
+    "file": "assets/backdrop/hills/NG.webp",
+    "sha256": "e2b69ef02f12c356600c14f43d4fa5e7ee10fa3a7866ba631c3f07fcabd266d7",
+    "bytes": 22034
+  },
+  {
+    "file": "assets/backdrop/hills/NL.webp",
+    "sha256": "dc372f75f05f6a07916b75b691ecce08eedae7635a105acd57d8e924c2b6abaf",
+    "bytes": 68882
+  },
+  {
+    "file": "assets/backdrop/hills/NM.webp",
+    "sha256": "06063f91864cda26d45563f8ec4682b83252137ae68032768ba608fd693e1ee5",
+    "bytes": 30848
+  },
+  {
+    "file": "assets/backdrop/hills/NR.webp",
+    "sha256": "165cc07ec033397d9d34e2207237adc36acefca6a71af70f96d938dc240f6d2a",
+    "bytes": 41882
+  },
+  {
+    "file": "assets/backdrop/hills/NXG.webp",
+    "sha256": "3932c25d49b6e2c7f2bdd6b6fe9ddbd4041e7442a09941cb63c3b4a33bb11dd4",
+    "bytes": 13138
+  },
+  {
+    "file": "assets/backdrop/hills/NXL.webp",
+    "sha256": "d5b4eaf92698533a3c1764925304ce901a14ed1ee32a3a0902bd7a5058ff7dbd",
+    "bytes": 39992
+  },
+  {
+    "file": "assets/backdrop/hills/NXM.webp",
+    "sha256": "de6183b691ffc88d3a14cf9615b39a141c40ddaae9c0ed2a47ca5af65761c9cc",
+    "bytes": 25902
+  },
+  {
+    "file": "assets/backdrop/hills/NXR.webp",
+    "sha256": "4c1baca3f950667e3a7092708075909b13d5a86403236053e47da1b0de3b3218",
+    "bytes": 33842
+  },
+  {
+    "file": "assets/backdrop/hills/WA1.webp",
+    "sha256": "c8cb5e49c9d77b37e85e1d62b254eb51745d09659fc1f9d6765c3fda6fcd0b51",
+    "bytes": 89852
+  },
+  {
+    "file": "assets/backdrop/hills/WA2.webp",
+    "sha256": "398502dac154fb6d47a13995ddaacbe8d6bce4c76f0fe94ffd29a80772e8af6e",
+    "bytes": 59538
+  },
+  {
+    "file": "assets/backdrop/hills/WF.webp",
+    "sha256": "dc62c4e82b403950f1526e4f01284769c49030b8245d9e085c3a76de61e34081",
+    "bytes": 27600
+  },
+  {
+    "file": "assets/backdrop/hills/WG.webp",
+    "sha256": "b57eab3bf57351d047a606ad24cfb957ecb843e647dea5f58392f7e4945a578a",
+    "bytes": 20210
+  },
+  {
+    "file": "assets/backdrop/hills/WL.webp",
+    "sha256": "0b2a3c76b81fbe07ce9d937a5dedb44fd60a52bc721f79370da273d8e5ef615b",
+    "bytes": 30360
+  },
+  {
+    "file": "assets/backdrop/hills/WM.webp",
+    "sha256": "2adf7fe808d3f3e40ce2e0bd2699b9e7ed03aefeccb711cd3e53e56e748a20c3",
+    "bytes": 31166
+  },
+  {
+    "file": "assets/backdrop/hills/WR.webp",
+    "sha256": "8dfb07cb22e86875bd968d9a0b88e5a4f466994f6ba8f638939bb27aac53138c",
+    "bytes": 43410
+  },
+  {
+    "file": "assets/backdrop/hills/WX.webp",
+    "sha256": "80ddc4feba6dca69c4351b7b13c14689a0672ffaa78c7dfe274d67b4346b771a",
+    "bytes": 38262
+  },
+  {
+    "file": "assets/backdrop/hills/WXA.webp",
+    "sha256": "2ff64b6808668de8db172c9004bfc636b4e1a01c390ee547221d59efc1c7abf4",
+    "bytes": 43944
+  },
+  {
+    "file": "assets/backdrop/hills/WXG.webp",
+    "sha256": "e1341c185fa57602416d574d4067cbd90ec495b328c68580921e714e8dda3a71",
+    "bytes": 16272
+  },
+  {
+    "file": "assets/backdrop/hills/WXL.webp",
+    "sha256": "87165dbadd5c48148f084397369d1f0488976720832f908e0656af95de924817",
+    "bytes": 38828
+  },
+  {
+    "file": "assets/backdrop/hills/WXR.webp",
+    "sha256": "9a483ed2a543dc91de15ca7225f7c446ddc7a523b21095e4d619ebf897994a1b",
+    "bytes": 24838
+  },
+  {
+    "file": "assets/backdrop/hills/WY.webp",
+    "sha256": "05ec940fc20ea3f64e9bc617c21da779d71309cecdde754c2063eca7340f2e9d",
+    "bytes": 22180
+  },
+  {
+    "file": "assets/env_cliff/lobes.glb",
+    "sha256": "8c035843994cd4f78d24168920fb8078583bca4def0f1556d75a71c75297005a",
+    "bytes": 8814640
+  },
+  {
+    "file": "assets/env_cliff/lobes.manifest.json",
+    "sha256": "87f25020be19ad9042cad610789dbb4fe4c3405f1e0103ed555603f8bfb85288",
+    "bytes": 20191
+  },
+  {
+    "file": "assets/env_cliff/look_cliff.png",
+    "sha256": "9a7ccf856844cf49f9c8b26eda95770db3fd11ff4925d1c19de7fe6cff8e9a6e",
+    "bytes": 7930963
+  },
+  {
+    "file": "assets/env_cliff/look_face.png",
+    "sha256": "d11653b14cb4b8efeb8747075e72592c2131828b40aa627279063538b0f1bf28",
+    "bytes": 2058037
+  },
+  {
+    "file": "assets/env_cliff/look_path.png",
+    "sha256": "f854007d0dea85db778d800cba45f044f72bb4347f066d1964f8238f8e062388",
+    "bytes": 1769537
+  },
+  {
+    "file": "assets/env_cliff/path.glb",
+    "sha256": "33694dbd3fcac26628ba62a7016c15655936565d21a83fd0604256a3c0798c38",
+    "bytes": 6450800
+  },
+  {
+    "file": "assets/env_cliff/path.manifest.json",
+    "sha256": "df852fb173fa3ea9c9f248a1aef471e2ea48b27cdf00e09c9a86b2d163f8a68a",
+    "bytes": 6572
+  },
+  {
+    "file": "assets/env_cliff/rocks.glb",
+    "sha256": "a36b04b1488969b4e0af92d478dbb8fb0eae35a71c9d0d5da4f5ef5da38b9702",
+    "bytes": 4837588
+  },
+  {
+    "file": "assets/env_cliff/rocks.manifest.json",
+    "sha256": "ac346d81526f94f34d83983804e3c325dbda63b44af5ea82eb1d2eb1bf7b0a50",
+    "bytes": 15419
+  },
+  {
+    "file": "assets/env_cliff/wall.glb",
+    "sha256": "6d6dcd12775b71a317779f67f16a2e597a6db8df6edf1670d6156170c5e0e344",
+    "bytes": 10183704
+  },
+  {
+    "file": "assets/env_cliff/wall.manifest.json",
+    "sha256": "3fd9b1ba03625ea1f3cdac6c553523e9519674c0bbd324fbe6acec2ba91d861b",
+    "bytes": 2848
+  },
+  {
+    "file": "assets/env_pines/bark.png",
+    "sha256": "aff1468fbab2442d6b4e299b82643bc595c6d8775535170d3b2abaf4553ecf64",
+    "bytes": 447154
+  },
+  {
+    "file": "assets/env_pines/bark_root.png",
+    "sha256": "bd45ee4268aa10f21818e13ac075874edbd4033830385c01006af378f1d31ec3",
+    "bytes": 494877
+  },
+  {
+    "file": "assets/env_pines/pines.glb",
+    "sha256": "ce7fee5a10fbc34adf50abca84d2e783fc4c1e52db4159c9da73b215c05c2a35",
+    "bytes": 1300396
+  },
+  {
+    "file": "assets/env_pines/pines.manifest.json",
+    "sha256": "cf9023fedfacfe84c5000b6dd3bd40dc8a4f04a3dcd62ac1be871e319b48988d",
+    "bytes": 29860
+  },
+  {
+    "file": "assets/env_pines/placement.json",
+    "sha256": "c5b394373688ca5e631cb36878672edd9ae0e14d14964353b2a6226f0004f882",
+    "bytes": 732049
+  },
+  {
+    "file": "assets/env_pines/tufts.png",
+    "sha256": "1b1794ffa08d6b94b61a4a0c70856767d23bdbded5e8e998dcb0e5fff9250f85",
+    "bytes": 2613059
+  },
+  {
+    "file": "assets/env_plateau/plateau.glb",
+    "sha256": "c928132b8faf71f9468a30ae1021fdfd6c598269eda4f38e04fe4a325ab97016",
+    "bytes": 531680
+  },
+  {
+    "file": "assets/env_plateau/plateau.manifest.json",
+    "sha256": "01916be194e0154feb6aaf89931fa1b7a43a92d46264dabf8f148ebd54125e71",
+    "bytes": 17898
+  },
+  {
+    "file": "assets/env_plateau/top_look.png",
+    "sha256": "9a7e7e15c5368c50dd8bdf05d78d01bca532692aca06907f3ee4e28edfa08f04",
+    "bytes": 1883600
+  },
+  {
+    "file": "assets/env_plateau/wall_look.png",
+    "sha256": "761379839931babd90c7463907f2fdf847783234aa8f004ece9cb415dd059c06",
+    "bytes": 3738829
+  }
+]

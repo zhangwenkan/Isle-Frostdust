@@ -1,0 +1,44 @@
+{
+  "retired": [
+    "Depth_Bamboo_Main_00",
+    "Depth_Bamboo_Main_01",
+    "Fish_Tidal_Reef_00_Body",
+    "Fish_Tidal_Reef_01_Body"
+  ],
+  "removed_cape_slab_components": 18,
+  "rigid_placements": [
+    {
+      "name": "InkSample_Rock_00",
+      "translation": [
+        -4.7309417724609375,
+        -0.3076243996620178,
+        0.31619977951049805
+      ]
+    },
+    {
+      "name": "Coast_Low_Grass_00.003",
+      "translation": [
+        -3.2795467376708984,
+        -0.37487339973449707,
+        -0.0054492950439453125
+      ]
+    },
+    {
+      "name": "Coast_Low_Grass_01.003",
+      "translation": [
+        -1.034505844116211,
+        -0.2653481960296631,
+        -0.1363391876220703
+      ]
+    },
+    {
+      "name": "Coast_Low_Grass_02.003",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "start_x": -20.7
+}

@@ -1,0 +1,138 @@
+{
+  "source": "Own project eastern bamboo, baked through Blender MCP",
+  "variants": [
+    {
+      "name": "slender_a",
+      "source": "Depth_Bamboo_Main_07",
+      "selected_culms": [
+        0
+      ],
+      "objects": [
+        "FineSource_slender_a_FineSource_Depth_Bamboo_Main_07_0"
+      ],
+      "center": [
+        0.36297762393951416,
+        2.936779410627205
+      ],
+      "height": 6.117278594202362,
+      "required_width": 5.673204889297486,
+      "width_px": 960,
+      "height_px": 1024,
+      "world_height": 6.0,
+      "plane_bounds": [
+        -2.504496693611145,
+        3.2304519414901733,
+        -0.12813105765376503,
+        6.303956280044222
+      ]
+    },
+    {
+      "name": "slender_b",
+      "source": "Depth_Bamboo_Main_08",
+      "selected_culms": [
+        2
+      ],
+      "objects": [
+        "FineSource_slender_b_FineSource_Depth_Bamboo_Main_08_2"
+      ],
+      "center": [
+        -0.29885226488113403,
+        2.839468361553154
+      ],
+      "height": 5.919026466376381,
+      "required_width": 4.6525126600265505,
+      "width_px": 832,
+      "height_px": 1024,
+      "world_height": 6.0,
+      "plane_bounds": [
+        -2.703456699848175,
+        2.105752170085907,
+        -0.12622259960210191,
+        6.097410037787838
+      ]
+    },
+    {
+      "name": "slender_c",
+      "source": "Depth_Bamboo_Main_09",
+      "selected_culms": [
+        5
+      ],
+      "objects": [
+        "FineSource_slender_c_FineSource_Depth_Bamboo_Main_09_5"
+      ],
+      "center": [
+        -0.021812915802001953,
+        2.93556232662173
+      ],
+      "height": 6.123965762234293,
+      "required_width": 4.37004732131958,
+      "width_px": 768,
+      "height_px": 1024,
+      "world_height": 6.0,
+      "plane_bounds": [
+        -2.3183000087738037,
+        2.2746741771698,
+        -0.13292642583710018,
+        6.306192212516594
+      ]
+    },
+    {
+      "name": "cluster_a",
+      "source": "Depth_Bamboo_Main_07",
+      "selected_culms": [
+        1,
+        3,
+        5
+      ],
+      "objects": [
+        "FineSource_cluster_a_FineSource_Depth_Bamboo_Main_07_1",
+        "FineSource_cluster_a_FineSource_Depth_Bamboo_Main_07_3",
+        "FineSource_cluster_a_FineSource_Depth_Bamboo_Main_07_5"
+      ],
+      "center": [
+        0.8104711771011353,
+        2.8308486316434576
+      ],
+      "height": 5.907905335857067,
+      "required_width": 6.042445650100708,
+      "width_px": 1088,
+      "height_px": 1024,
+      "world_height": 6.0,
+      "plane_bounds": [
+        -2.3281034231185913,
+        3.949045777320862,
+        -0.1294391207413793,
+        6.0824999181607495
+      ]
+    },
+    {
+      "name": "cluster_b",
+      "source": "Depth_Bamboo_Main_08",
+      "selected_culms": [
+        0,
+        4,
+        6
+      ],
+      "objects": [
+        "FineSource_cluster_b_FineSource_Depth_Bamboo_Main_08_0",
+        "FineSource_cluster_b_FineSource_Depth_Bamboo_Main_08_4",
+        "FineSource_cluster_b_FineSource_Depth_Bamboo_Main_08_6"
+      ],
+      "center": [
+        0.21018946170806885,
+        3.016849225261249
+      ],
+      "height": 6.279834369225427,
+      "required_width": 6.157165040969849,
+      "width_px": 1024,
+      "height_px": 1024,
+      "world_height": 6.0,
+      "plane_bounds": [
+        -2.9297276735305786,
+        3.3501065969467163,
+        -0.12940125835719035,
+        6.473607251526562
+      ]
+    }
+  ]
+}

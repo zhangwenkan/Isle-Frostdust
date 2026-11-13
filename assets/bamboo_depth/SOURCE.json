@@ -1,0 +1,107 @@
+{
+  "source": "Project eastern bamboo meshes; lowest complete branch fans removed and baked in Blender MCP",
+  "author": "tools/blender/bake_depth_bamboo.py",
+  "processing": "RGBA edge-color dilation only; original alpha unchanged",
+  "textures": [
+    {
+      "file": "cluster_a_color.png",
+      "size": [
+        960,
+        1024
+      ],
+      "opaque_pixels": 151518,
+      "edge_pixels": 192321,
+      "sha256": "e6a7e7bccfa5ccbbba4d20f26b58bbc39e52f76f62225dc61df010468ffb7414"
+    },
+    {
+      "file": "cluster_a_normal.png",
+      "size": [
+        960,
+        1024
+      ],
+      "opaque_pixels": 151518,
+      "edge_pixels": 192321,
+      "sha256": "511a860ae96720a770e2414de4bcda0145a2505865a0a713218e10dfdc38eb2d"
+    },
+    {
+      "file": "cluster_b_color.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "opaque_pixels": 146231,
+      "edge_pixels": 195518,
+      "sha256": "03b2b2ef563d4cb407889b2dec508558ff2d5279e5086ce3d4960832e13cb411"
+    },
+    {
+      "file": "cluster_b_normal.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "opaque_pixels": 146231,
+      "edge_pixels": 195518,
+      "sha256": "6124f764e7b2db0472af9008b74949cd9a9abb2c61ced645756f8f08ecfa759b"
+    },
+    {
+      "file": "slender_a_color.png",
+      "size": [
+        960,
+        1024
+      ],
+      "opaque_pixels": 74932,
+      "edge_pixels": 116214,
+      "sha256": "9371514e0c994d5ae5f315158ff006e858ce9d4aef106cf3455bbab4b9e1a965"
+    },
+    {
+      "file": "slender_a_normal.png",
+      "size": [
+        960,
+        1024
+      ],
+      "opaque_pixels": 74932,
+      "edge_pixels": 116214,
+      "sha256": "1ad2365c87d0bf23fa5543c7ae12b7cd42b468c0d8f3a5eb35da2905d364e954"
+    },
+    {
+      "file": "slender_b_color.png",
+      "size": [
+        832,
+        1024
+      ],
+      "opaque_pixels": 70503,
+      "edge_pixels": 108643,
+      "sha256": "1601b63a0caef48645b1e8a77b106ca645cfae8acf09e4783efc8176ca9b7f08"
+    },
+    {
+      "file": "slender_b_normal.png",
+      "size": [
+        832,
+        1024
+      ],
+      "opaque_pixels": 70503,
+      "edge_pixels": 108643,
+      "sha256": "3cc893bf172a75f11e1ac2104fd0670750a61864e2dcc6113f38d80a5ecef7c7"
+    },
+    {
+      "file": "slender_c_color.png",
+      "size": [
+        640,
+        1024
+      ],
+      "opaque_pixels": 60379,
+      "edge_pixels": 93140,
+      "sha256": "997245454bcc10390d146f019149e10a6010c38643360bdcf3d6157cabd33b6b"
+    },
+    {
+      "file": "slender_c_normal.png",
+      "size": [
+        640,
+        1024
+      ],
+      "opaque_pixels": 60379,
+      "edge_pixels": 93140,
+      "sha256": "583113da1f8114e113c3a0c500bfb9f83dab4436dc6a21466fcd7afd3ba6d221"
+    }
+  ]
+}

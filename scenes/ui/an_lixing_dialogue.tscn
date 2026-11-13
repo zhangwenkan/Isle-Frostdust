@@ -1,0 +1,130 @@
+[gd_scene load_steps=11 format=3]
+
+[ext_resource type="Script" path="res://scripts/dialogue/portrait_dialogue.gd" id="1_controller"]
+[ext_resource type="Resource" path="res://narrative/dialogue/an_lixing_after_rest.tres" id="2_dialogue"]
+[ext_resource type="Texture2D" path="res://assets/ui/portraits/an_lixing_shoulders.png" id="3_portrait"]
+[ext_resource type="Texture2D" path="res://assets/ui/dialogue/pixel_wuxia/wide_frame.png" id="4_frame"]
+[ext_resource type="Texture2D" path="res://assets/ui/dialogue/pixel_wuxia/speaker_plaque.png" id="5_plaque"]
+[ext_resource type="Texture2D" path="res://assets/ui/dialogue/pixel_wuxia/cloud_advance.png" id="6_advance"]
+[ext_resource type="FontFile" path="res://assets/ui/fonts/i_ngaan/I-Ngaan.ttf" id="9_font"]
+
+[sub_resource type="SystemFont" id="Font_kaiti"]
+font_names = PackedStringArray("KaiTi", "楷体")
+font_weight = 400
+antialiasing = 0
+allow_system_fallback = false
+hinting = 0
+subpixel_positioning = 0
+oversampling = 1.0
+
+[sub_resource type="FontVariation" id="Font_kaiti_medium"]
+base_font = SubResource("Font_kaiti")
+variation_embolden = 0.325
+
+[sub_resource type="Theme" id="Theme_dialogue"]
+default_font = ExtResource("9_font")
+default_font_size = 30
+Label/colors/font_color = Color(1, 0.9, 0.68, 1)
+RichTextLabel/colors/default_color = Color(0.08, 0.055, 0.035, 1)
+
+[node name="AnLixingDialogue" type="CanvasLayer"]
+layer = 40
+script = ExtResource("1_controller")
+content = ExtResource("2_dialogue")
+
+[node name="Screen" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = SubResource("Theme_dialogue")
+
+[node name="Card" type="Control" parent="Screen"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 449.0
+offset_right = 1260.0
+offset_bottom = 708.0
+mouse_default_cursor_shape = 2
+
+[node name="Portrait" type="TextureRect" parent="Screen/Card"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = -292.0
+offset_right = 448.0
+offset_bottom = 16.0
+mouse_filter = 2
+texture_filter = 1
+texture = ExtResource("3_portrait")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Frame" type="TextureRect" parent="Screen/Card"]
+layout_mode = 0
+offset_right = 1240.0
+offset_bottom = 259.0
+mouse_filter = 2
+texture_filter = 1
+texture = ExtResource("4_frame")
+expand_mode = 1
+
+[node name="Nameplate" type="TextureRect" parent="Screen/Card"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 28.0
+offset_right = 310.0
+offset_bottom = 81.0
+mouse_filter = 2
+texture_filter = 1
+texture = ExtResource("5_plaque")
+expand_mode = 1
+
+[node name="Speaker" type="Label" parent="Screen/Card/Nameplate"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 30.0
+offset_top = 1.0
+offset_right = 184.0
+offset_bottom = 49.0
+mouse_filter = 2
+theme_override_colors/font_shadow_color = Color(0.20, 0.06, 0.035, 0.85)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 36
+text = "蕭野"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Body" type="RichTextLabel" parent="Screen/Card"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 142.0
+offset_top = 96.0
+offset_right = 1092.0
+offset_bottom = 210.0
+mouse_filter = 2
+theme_override_fonts/normal_font = SubResource("Font_kaiti_medium")
+theme_override_font_sizes/normal_font_size = 32
+theme_override_constants/line_separation = 14
+bbcode_enabled = false
+scroll_active = false
+autowrap_mode = 3
+
+[node name="Advance" type="TextureButton" parent="Screen/Card"]
+layout_mode = 0
+offset_left = 1070.0
+offset_top = 173.0
+offset_right = 1160.0
+offset_bottom = 209.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+texture_filter = 1
+texture_normal = ExtResource("6_advance")
+texture_pressed = ExtResource("6_advance")
+texture_hover = ExtResource("6_advance")
+ignore_texture_size = true
+stretch_mode = 5

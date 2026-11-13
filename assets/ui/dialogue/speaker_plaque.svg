@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="198" height="52" viewBox="0 0 198 52">
+<defs>
+  <linearGradient id="paper" x2="0" y2="1"><stop stop-color="#e9dfc6"/><stop offset=".48" stop-color="#e0d1ae"/><stop offset="1" stop-color="#cbbc98"/></linearGradient>
+  <linearGradient id="rim" x2="0" y2="1"><stop stop-color="#535545"/><stop offset=".34" stop-color="#292f29"/><stop offset="1" stop-color="#41382c"/></linearGradient>
+  <linearGradient id="bronze" x2="0" y2="1"><stop stop-color="#c7b286"/><stop offset=".46" stop-color="#a08b62"/><stop offset="1" stop-color="#6c573a"/></linearGradient>
+  <linearGradient id="wash"><stop stop-color="#8c8165" stop-opacity=".22"/><stop offset=".36" stop-color="#b4aa8d" stop-opacity="0"/><stop offset="1" stop-color="#85795e" stop-opacity=".12"/></linearGradient>
+  <pattern id="weave" width="6" height="6" patternUnits="userSpaceOnUse"><path d="M0 1H6M1 0V6" stroke="#685638" stroke-opacity=".045" stroke-width=".5"/></pattern>
+  <g id="corner">
+    <path d="M0 42V8L8 0H60L51 8H19L8 19V42Z" fill="#343b31" stroke="#a99671" stroke-width="1.4"/>
+    <path d="M6 38V18L18 6H49M13 30V20L22 12H35V20H23V29H32" fill="none" stroke="#c1ab7f" stroke-width="1.3"/>
+    <path d="M2 3L10 3L3 10Z" fill="#dbca9d"/>
+    <path d="M36 5L45 0L51 4L45 8Z" fill="#827152"/>
+  </g>
+  <g id="cloud" fill="none" stroke="#7d7055" stroke-width="1">
+    <path d="M0 40C17 40 13 20 34 20C34 6 57 4 65 17C84 8 102 24 95 38C105 48 126 36 131 26C147 12 170 24 162 40C152 57 140 37 149 34"/>
+    <path d="M11 45C30 45 25 29 40 29C46 17 59 23 59 30C65 42 79 37 78 27M27 52C50 52 49 45 67 45H126C140 45 144 53 159 53"/>
+  </g>
+</defs>
+<path d="M15 4H183L195 26L183 48H15L3 26Z" fill="#14241e" opacity=".3" transform="translate(0 3)"/>
+<path d="M15 2H183L195 24L183 46H15L3 24Z" fill="url(#rim)" stroke="#1c261f" stroke-width="2"/>
+<path d="M19 7H179L188 24L179 41H19L10 24Z" fill="none" stroke="url(#bronze)" stroke-width="1.5"/>
+<path d="M26 11H172M26 37H172" stroke="#c6b181" stroke-opacity=".4"/>
+<path d="M17 24L22 19L27 24L22 29ZM171 24L176 19L181 24L176 29Z" fill="#b89d6e"/>
+
+</svg>
