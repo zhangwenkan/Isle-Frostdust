@@ -1,0 +1,171 @@
+{
+  "source": "User-supplied layered paintings; no third-party game assets",
+  "operations": "Alpha floor 8/255; source files preserved. Local crops/alignment listed per texture.",
+  "textures": {
+    "land": {
+      "source": "left-terrain-v1/source.png",
+      "size": [
+        2048,
+        1536
+      ],
+      "sha256": "7a356774556ac039170d8340aad5e1f27ca2aa8f0a9fef4bbc7d8a8fba4a9a86"
+    },
+    "sky": {
+      "source": "background-v1/source/sky.png",
+      "size": [
+        2048,
+        1536
+      ],
+      "sha256": "7a120daedb6a15e882dd32ab72dbb68ccc5786dffa19b1b873b2483303070ce1"
+    },
+    "mountain_far": {
+      "source": "background-v1/source/far.png",
+      "size": [
+        2048,
+        1536
+      ],
+      "sha256": "9559091a2e9ab4957cbf2603e6e47bc44c0c13a7f8f037ce3f967e883ee1eb7e"
+    },
+    "mountain_middle": {
+      "source": "background-v1/source/middle.png",
+      "size": [
+        2048,
+        1536
+      ],
+      "sha256": "62328c4e54c24df6215a8964277f251965499d2bbab00f6a563a15a62af1574b"
+    },
+    "mountain_near": {
+      "source": "background-v1/source/near.png",
+      "size": [
+        2048,
+        1536
+      ],
+      "sha256": "74442b5516bc18708a437607aa1f33893bc613d51b2aec27e4d0bcc863242526"
+    },
+    "bamboo_back": {
+      "source": "bamboo-back-v2/source.png",
+      "size": [
+        2048,
+        1536
+      ],
+      "sha256": "cccc57f16ba3db00768fe75c63b8b4105d7726e46da33bee1da27047ba6f8c25"
+    },
+    "bamboo_middle": {
+      "source": "bamboo-v1/source/bamboo-02.png",
+      "size": [
+        512,
+        900
+      ],
+      "sha256": "a31a9ff3af19e8da1e67890e6ced519ddeecd43d5109c1b50040ad5aa51a4c43"
+    },
+    "bamboo_front": {
+      "source": "bamboo-v1/source/bamboo-03.png",
+      "size": [
+        512,
+        966
+      ],
+      "sha256": "ba303601f56ae303b1c7dfdee61b500a5410874d1512406a51e7dd2d0ae894fa"
+    },
+    "bamboo_bridge": {
+      "source": "bamboo-v1/source/bamboo-04.png",
+      "size": [
+        512,
+        1034
+      ],
+      "sha256": "140254e03d09072392f00ce9cf7d783d12ddb36b8fd88b9775fe6d7a106e9110"
+    },
+    "trees_back": {
+      "source": "trees-foreground-v1/source/trees-back.png",
+      "size": [
+        2048,
+        1536
+      ],
+      "sha256": "6eec960a66b2160d4afb8de403db675cc9f536f680abe294d3c769823a63015a"
+    },
+    "foreground_bottom": {
+      "source": "trees-foreground-v1/source/foreground-bottom.png",
+      "size": [
+        2048,
+        1536
+      ],
+      "sha256": "a102481e384040d02968ccc742a0bc5419f0db74ffc96de9c7c84e8f0e0d4af6"
+    },
+    "cave_outer": {
+      "source": "cave-v1/source/exterior.png; review alignment",
+      "size": [
+        2048,
+        1536
+      ],
+      "sha256": "bd8d3e7e0d1cc5e07f5331fc3369e6697713543a7dfdd2cb4470207c30d53f17"
+    },
+    "cave_inner": {
+      "source": "cave-v1/source/interior.png; enclosed-opening mask",
+      "size": [
+        2048,
+        1536
+      ],
+      "sha256": "1901ce7af8a2b514aa5d06678ef21748dcc3228986a42eb3568394daa437f0ad"
+    },
+    "vine_left": {
+      "source": "cave-v1/source/foliage.png; left group",
+      "size": [
+        2048,
+        1536
+      ],
+      "sha256": "4c429c492635b289bcb2dee8a2399af9155dafe7db4fccbb4ab29187c46da604"
+    },
+    "vine_right": {
+      "source": "cave-v1/source/foliage.png; right group",
+      "size": [
+        2048,
+        1536
+      ],
+      "sha256": "03eed3d838b113e0c0da77e5821021fb47b5d4f827c038aa5357ac69b7f53308"
+    },
+    "foreground_right_leaves": {
+      "source": "trees-foreground-v1/right-isolated; canopy mask",
+      "size": [
+        2048,
+        1536
+      ],
+      "sha256": "cf533cfda56110944882d5ca182da385e9b3830209f9b19fe371ee95551d35be"
+    },
+    "foreground_right_rock": {
+      "source": "trees-foreground-v1/right-isolated; complementary static rock mask",
+      "size": [
+        2048,
+        1536
+      ],
+      "sha256": "4a7db531a187deaf4336d7c54fc8253375e20e7456d912adec32c5078f06c694"
+    },
+    "wood_plank": {
+      "source": "bridge-v1/source.png; corrected 64x192 plank quadrilateral; opaque timber",
+      "size": [
+        64,
+        192
+      ],
+      "sha256": "c9d6f0555223e8d3597490974d35d3d3f8298581bc2de8dc17b79c21ec9ba2c9"
+    },
+    "wood_post": {
+      "source": "bridge-v1/source.png; post shaft",
+      "size": [
+        64,
+        192
+      ],
+      "sha256": "33e57a02427404c88f528c0aa805af3cbab3c3cc82ffc7e7335dd92c30d3c9e3"
+    }
+  },
+  "spatial_foundation": {
+    "status": "local volumetric sample; awaiting visual feedback",
+    "textures": "spatial_textures/SOURCE.json",
+    "author_scripts": [
+      "tools/blender/build_spatial_foundation.py",
+      "tools/blender/refine_spatial_foundation.py",
+      "tools/blender/finish_spatial_foundation.py",
+      "tools/blender/polish_spatial_lining.py",
+      "tools/blender/trim_spatial_lining_floor.py"
+    ],
+    "geometry_workflow": "Blender MCP on existing Blender, port 19887",
+    "review": "../../artifacts/spatial-foundation-review/README.md"
+  }
+}

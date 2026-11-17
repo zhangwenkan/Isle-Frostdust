@@ -1,0 +1,69 @@
+{
+  "sand": {
+    "source": "../textures/land.png",
+    "crop": [
+      545,
+      1265,
+      765,
+      1305
+    ],
+    "processing": "local lighting equalization, controlled color mean, source brush detail, blended borders without mirroring",
+    "sha256": "d4b64ac131e70b65b051beff8dd0c87be7c905b6797394d7a9fc86ea313f6028"
+  },
+  "rock": {
+    "source": "../textures/land.png",
+    "crop": [
+      325,
+      977,
+      418,
+      1070
+    ],
+    "processing": "local lighting equalization, controlled color mean, source brush detail, blended borders without mirroring",
+    "sha256": "0f3ecfbdbf48cefbefa3c498573cc772d3b21db5ec2ce5639d30228847bc6413"
+  },
+  "grass": {
+    "source": "../textures/land.png",
+    "crop": [
+      160,
+      896,
+      302,
+      930
+    ],
+    "processing": "local lighting equalization, controlled color mean, source brush detail, blended borders without mirroring",
+    "sha256": "69b451007056845263b70a1451a02328614f370df27c28c145a63e8c283ccfe5"
+  },
+  "path": {
+    "source": "../textures/land.png",
+    "crop": [
+      645,
+      836,
+      745,
+      883
+    ],
+    "processing": "local lighting equalization, controlled color mean, source brush detail, blended borders without mirroring",
+    "sha256": "da649bd4f4423bacbf12342cae708b8cbe96beaaaf576fdbae7342ce31f9421c"
+  },
+  "step": {
+    "source": "../textures/land.png",
+    "crop": [
+      593,
+      958,
+      721,
+      974
+    ],
+    "processing": "local lighting equalization, controlled color mean, source brush detail, blended borders without mirroring",
+    "sha256": "d685d08a6329704fc62d40f6af939d50f449e08a8f773d443d459a5d15688c3c"
+  },
+  "bamboo_middle": {
+    "source": "../textures/bamboo_middle.png",
+    "processing": "0.86 saturation, original alpha preserved"
+  },
+  "bamboo_front": {
+    "source": "../textures/bamboo_front.png",
+    "processing": "0.86 saturation, original alpha preserved"
+  },
+  "bamboo_bridge": {
+    "source": "../textures/bamboo_bridge.png",
+    "processing": "0.86 saturation, original alpha preserved"
+  }
+}

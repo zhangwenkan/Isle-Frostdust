@@ -1,0 +1,160 @@
+{
+  "rock_a": {
+    "source": "../textures/land.png",
+    "crop": [
+      280,
+      965,
+      413,
+      1083
+    ],
+    "processing": "retained brush/facet detail, controlled albedo range; standalone material patch",
+    "size": [
+      192,
+      192
+    ],
+    "sha256": "d5b412d3cc1360d48802e479097bb0cc359241831716b59ba6a078dac0e7f6f6"
+  },
+  "rock_b": {
+    "source": "../textures/land.png",
+    "crop": [
+      343,
+      977,
+      454,
+      1086
+    ],
+    "processing": "retained brush/facet detail, controlled albedo range; standalone material patch",
+    "size": [
+      192,
+      192
+    ],
+    "sha256": "cfeb7b08a02697913f75beb646e7dc1c7d4e23f830768586e5116d98791661da"
+  },
+  "rock_c": {
+    "source": "../textures/land.png",
+    "crop": [
+      59,
+      969,
+      137,
+      1068
+    ],
+    "processing": "retained brush/facet detail, controlled albedo range; standalone material patch",
+    "size": [
+      192,
+      192
+    ],
+    "sha256": "e971260725ab98c4e8d67566c57a8fd8b78b4e069bb7aa2eb8a6749aa7c27274"
+  },
+  "rock_d": {
+    "source": "../textures/land.png",
+    "crop": [
+      803,
+      960,
+      847,
+      1048
+    ],
+    "processing": "retained brush/facet detail, controlled albedo range; standalone material patch",
+    "size": [
+      192,
+      192
+    ],
+    "sha256": "3edb7ab06955f4f38fadabcd2d18b9194dcf4851ff0d0fc169a7fee691306f7b"
+  },
+  "rock_top": {
+    "source": "../textures/land.png",
+    "crop": [
+      265,
+      920,
+      399,
+      951
+    ],
+    "processing": "retained brush/facet detail, controlled albedo range; standalone material patch",
+    "size": [
+      192,
+      192
+    ],
+    "sha256": "f28c88305785e615465bde4d1dc0bfabeae4c0e17cb5ac8a901697cf14c0792f"
+  },
+  "soil": {
+    "source": "../textures/land.png",
+    "crop": [
+      166,
+      903,
+      303,
+      933
+    ],
+    "processing": "retained brush/facet detail, controlled albedo range; standalone material patch",
+    "size": [
+      192,
+      192
+    ],
+    "sha256": "49882c51f763561981e38d7f4bd3e88ac17295840334f0377db58991c115f2f2"
+  },
+  "grass": {
+    "source": "../textures/land.png",
+    "crop": [
+      228,
+      877,
+      340,
+      917
+    ],
+    "processing": "retained brush/facet detail, controlled albedo range; standalone material patch",
+    "size": [
+      192,
+      192
+    ],
+    "sha256": "6f4b76917b33d23fa56b7bf6f287af286471e4859cbe19d6919bf4b05a514f1e"
+  },
+  "sand": {
+    "source": "../textures/land.png",
+    "crop": [
+      538,
+      1260,
+      774,
+      1303
+    ],
+    "processing": "retained brush/facet detail, controlled albedo range; standalone material patch",
+    "size": [
+      192,
+      192
+    ],
+    "sha256": "ec477d2709afebc699d72174161ae0d952c727362aca3e3f68ef736f32c449e0"
+  },
+  "paving": {
+    "source": "../textures/land.png",
+    "crop": [
+      647,
+      837,
+      757,
+      883
+    ],
+    "processing": "retained brush/facet detail, controlled albedo range; standalone material patch",
+    "size": [
+      192,
+      192
+    ],
+    "sha256": "305f0883a31345810d3f40cd30915577b18fa725b27845d0f3a20b54eaea677b"
+  },
+  "tread": {
+    "source": "../textures/land.png",
+    "crop": [
+      592,
+      958,
+      721,
+      974
+    ],
+    "processing": "retained brush/facet detail, controlled albedo range; standalone material patch",
+    "size": [
+      192,
+      192
+    ],
+    "sha256": "2e0301d1dfc302c2e4ad813c899dc8d250b57658f078167f5a1824e1fcb91603"
+  },
+  "culm": {
+    "source": "authored axial brush marks; physical nodes in Blender",
+    "sha256": "cca4ecba1228af678bae23cd99033843a5a4e4bc4fc74360f68925b7e73330e5"
+  },
+  "leaf": {
+    "source": "authored restrained midrib; physical lanceolate leaves in Blender; no plant photograph",
+    "sha256": "57c2731168f20e40977ad955307d7f3ce38c1f65dc91d9f1ff8cd7fdb95baca4"
+  }
+}

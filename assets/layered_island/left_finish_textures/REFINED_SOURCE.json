@@ -1,0 +1,37 @@
+{
+  "method": "Authored restrained fracture planes and intermittent structure strokes; unique top map follows actual path in XY. Rock maps add a limited high-pass brush layer from the supplied land painting; grass is newly painted. Source crop bounds retained in this script.",
+  "maps": [
+    "rock_a",
+    "rock_b",
+    "rock_c",
+    "rock_d",
+    "rock_top",
+    "soil",
+    "paving",
+    "tread",
+    "sand",
+    "ground_unique"
+  ],
+  "ground_mapping": {
+    "x": [
+      -20,
+      2
+    ],
+    "y": [
+      -4,
+      17
+    ]
+  },
+  "hashes": {
+    "rock_a": "a1621f3f61b4f14a32ea4dcbd32acf28ea6cf05ed97328f0a760fb267f3776ba",
+    "rock_b": "35d3aefe5bf09806ebc193a36d786d3c90a82ba23a7e034e351642c375eb950d",
+    "rock_c": "bfa7b36841b56872ea5d716499c241f07fc38dc9c690e1ddb9f168b262169ff4",
+    "rock_d": "18394d296ecf6daf0d809a6bb26504d387b426cb0493cbc5710e9334ca5714dd",
+    "rock_top": "103c4ff2c1aa282bee04676eb1a9dd3a9c7e4c42021f3de33f03f9fb3c69537a",
+    "soil": "fb7b7fc686aa568aae9c7a656371015713f001dd6fb25e509aa042d4e5aa2a35",
+    "paving": "cf0ef6d7305ff2670cf913a10b2e0437a5c2866bf2e6e1b99333ca0f3f730228",
+    "tread": "81d30d7aaa4a28b37ff1c3022e7cb62e92cfe2f4c9d1723478e810e4a91a7f69",
+    "sand": "4fad5c2373fa83d2bc4bf90cf5ba5cccdb005a025dc2f3079bdb0fa37d74fa64",
+    "ground_unique": "db3ecfd19e79e0bf220ef06277efac66f09ca10b2ed35543e4d527b548d727d0"
+  }
+}
