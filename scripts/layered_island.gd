@@ -3,12 +3,14 @@ extends Node3D
 const PAINT=preload("res://shaders/layered_paint.gdshader")
 const DISTANCE=preload("res://shaders/layered_distance.gdshader")
 const CLOUD=preload("res://shaders/layered_cloudsea.gdshader")
+const MOVE_SPEED=7.0
 var layout:Dictionary
 var anchors:Dictionary={}
 var neighbors:Dictionary={}
 var surface=preload("res://scripts/layered_surface.gd").new()
 var camera:Camera3D
 var hero:AnimatedSprite3D
+var hero_lighting=preload("res://scripts/hero_forest_lighting.gd").new()
 var contact:MeshInstance3D
 var hud:CanvasLayer
 var location_label:Label
@@ -30,6 +32,10 @@ var birds:Array[Dictionary]=[]
 var last_ground:Dictionary={}
 var contact_mesh:Mesh
 var bamboo_occluders:Array[MeshInstance3D]=[]
+var coastal_backdrops:Array[ShaderMaterial]=[]
+var forest_paintings:Array[ShaderMaterial]=[]
+var forest_light_materials:Array[ShaderMaterial]=[]
+var sea_material:ShaderMaterial
 
 func v3(a:Array)->Vector3:return Vector3(a[0],a[1],a[2])
 
@@ -44,10 +50,11 @@ func _ready()->void:
 	_configure_art($World)
 	surface.configure($World)
 	_build_environment()
+	_bind_forest_light_field()
 	_build_hero()
 	_build_hud()
 	_build_birds()
-	reset_actor()
+	reset_actor("forest_west_mid")
 	print("LAYERED_ISLAND_READY surfaces=%d triangles=%d"%[surface.surfaces.size(),surface.triangle_count])
 
 func _paint(tex:String,plant=false,tint=Color.WHITE)->ShaderMaterial:
@@ -62,7 +69,34 @@ func _configure_art(node:Node)->void:
 	if node is MeshInstance3D:
 		var name_text=str(node.name)
 		node.cast_shadow=GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
-		if name_text=="WALK_Left_Beach" and layout.has("beach_swatch"):
+		if name_text.begins_with("Forest_Paint_"):
+			var key=name_text.trim_prefix("Forest_Paint_")
+			var files={"Near":"forest_shapes_near","Middle":"forest_shapes_middle","Depth":"forest_depth"}
+			var m=ShaderMaterial.new();m.shader=preload("res://shaders/forest_depth_solid.gdshader") if key=="Depth" else preload("res://shaders/forest_depth_paint.gdshader")
+			m.set_shader_parameter("painting",load("res://assets/layered_island/forest_layers/"+files[key]+".png"))
+			m.set_shader_parameter("layer",{"Near":0.0,"Middle":1.0,"Depth":2.0}[key])
+			m.set_shader_parameter("author_world_to_local",$World.global_transform.affine_inverse())
+			m.render_priority={"Near":-70,"Middle":-75,"Depth":-80}[key]
+			node.material_override=m;forest_paintings.append(m)
+		elif name_text.begins_with("Forest_Mist_"):
+			var key=name_text.trim_prefix("Forest_Mist_")
+			var m=ShaderMaterial.new();m.shader=preload("res://shaders/forest_layer_mist.gdshader")
+			m.set_shader_parameter("layer",{"Front":0.0,"Middle":1.0,"Far":2.0}[key])
+			m.set_shader_parameter("fog_color",Color({"Front":"8fa580","Middle":"a7b69a","Far":"b8c3a9"}[key]).srgb_to_linear())
+			m.set_shader_parameter("author_world_to_local",$World.global_transform.affine_inverse())
+			m.render_priority={"Front":-67,"Middle":-72,"Far":-77}[key]
+			node.material_override=m;forest_paintings.append(m)
+		elif name_text.begins_with("Forest_Sunray_"):
+			var data:Dictionary={}
+			for row in layout.forest_extension.layer_roles.get("sunray_layers",[]):
+				if row.name==name_text:data=row;break
+			var m=ShaderMaterial.new();m.shader=preload("res://shaders/forest_sunray_veil.gdshader")
+			m.set_shader_parameter("author_world_to_local",$World.global_transform.affine_inverse())
+			m.set_shader_parameter("layer",float(data.get("layer",0.0)))
+			m.set_shader_parameter("veil_strength",float(data.get("strength",.14)))
+			m.render_priority=-69-int(data.get("layer",0))*5
+			node.material_override=m;forest_paintings.append(m)
+		elif name_text=="WALK_Left_Beach" and layout.has("beach_swatch"):
 			var m=ShaderMaterial.new();m.shader=preload("res://shaders/beach_sand.gdshader")
 			m.set_shader_parameter("sand_map",load("res://assets/layered_island/beach_swatch/sand_albedo.png"))
 			node.material_override=m;node.cast_shadow=GeometryInstance3D.SHADOW_CASTING_SETTING_ON
@@ -77,8 +111,15 @@ func _configure_art(node:Node)->void:
 		elif name_text=="SUPPORT_Bridge":node.hide()
 		elif name_text=="Sea_Surface":
 			var m=ShaderMaterial.new();m.shader=preload("res://shaders/layered_sea.gdshader");m.render_priority=-60;node.material_override=m
+			sea_material=m
 			m.set_shader_parameter("author_world_to_local",$World.global_transform.affine_inverse())
 			m.set_shader_parameter("swash_enabled",layout.has("beach_swatch"))
+			if layout.has("forest_extension"):
+				var mask_data=JSON.parse_string(FileAccess.get_file_as_string("res://assets/layered_island/forest_extension/forest_water_mask.json"))
+				var bounds:Array=mask_data.bounds
+				m.set_shader_parameter("forest_land_mask_enabled",true)
+				m.set_shader_parameter("forest_land_mask",load("res://assets/layered_island/forest_extension/forest_water_mask.png"))
+				m.set_shader_parameter("forest_land_bounds",Vector4(bounds[0],bounds[1],bounds[2],bounds[3]))
 			var coast=PackedVector2Array()
 			for p:Array in layout.get("shoreline",[]):
 				coast.append(Vector2(p[0],p[1]))
@@ -120,6 +161,7 @@ func _configure_art(node:Node)->void:
 				m.set_shader_parameter("project_from_author_camera",name_text in ["Land_Relief","Cave_Outer_Relief","Cave_Inner_Relief","WALK_Front_Stairs","WALK_Land","WALK_Cave_Interior"])
 				if name_text.begins_with("WALK_Land"):m.set_shader_parameter("shade_motion",.018)
 				node.material_override=m
+		if name_text.begins_with("Cloud_Sea") or name_text.begins_with("Mountain_") or name_text=="Sky_Painting":coastal_backdrops.append(node.material_override)
 	for child in node.get_children():_configure_art(child)
 
 func _configure_left_material(node:MeshInstance3D)->void:
@@ -132,21 +174,51 @@ func _configure_left_material(node:MeshInstance3D)->void:
 	for i in node.mesh.get_surface_count():
 		var original=node.mesh.surface_get_material(i) as StandardMaterial3D
 		if not original:continue
-		var m=ShaderMaterial.new();m.shader=preload("res://shaders/layered_left.gdshader")
+		if str(original.resource_name).begins_with("ForestRole_Leaf_"):
+			var leaf_material=ShaderMaterial.new();leaf_material.shader=preload("res://shaders/forest_role_leaf.gdshader")
+			leaf_material.set_shader_parameter("painting",original.albedo_texture)
+			leaf_material.set_shader_parameter("author_world_to_local",$World.global_transform.affine_inverse())
+			leaf_material.set_shader_parameter("foreground",depth_band=="role_front")
+			_bind_bamboo_wind(leaf_material,str(node.name))
+			node.set_surface_override_material(i,leaf_material)
+			node.cast_shadow=GeometryInstance3D.SHADOW_CASTING_SETTING_DOUBLE_SIDED
+			continue
+		var forest_surface=layout.get("forest_extension",{}).has("layer_roles") and (str(node.name).begins_with("Forest_") or str(node.name).begins_with("WALK_Forest_"))
+		var m=ShaderMaterial.new();m.shader=preload("res://shaders/layered_forest_surface.gdshader") if forest_surface else preload("res://shaders/layered_left.gdshader")
+		if forest_surface:m.set_shader_parameter("role_lighting",true)
 		m.set_shader_parameter("use_texture",original.albedo_texture!=null)
 		m.set_shader_parameter("painting",original.albedo_texture)
 		m.set_shader_parameter("tint",Color.WHITE if original.albedo_texture else original.albedo_color)
 		m.set_shader_parameter("wind_strength",.16 if bamboo else (.06 if grass else 0.0))
+		if forest_surface and bamboo:_bind_bamboo_wind(m,str(node.name),true)
 		m.set_shader_parameter("vertex_tint",bamboo or grass)
 		m.set_shader_parameter("foliage",str(original.resource_name).begins_with("LF_leaf"))
 		m.set_shader_parameter("actor_clearance",bamboo)
 		m.set_shader_parameter("grove_tint",Color("a6b2a1") if depth_band=="far" else (Color("bac4ac") if depth_band=="deep" else (Color("b1b8a0") if depth_band=="front" else Color.WHITE)))
+		if depth_band.begins_with("valley_"):m.set_shader_parameter("grove_tint",Color("b6c2a8") if depth_band=="valley_far" else Color("c1ccb4"))
 		if str(node.name)=="Forest_Grass_Understory":m.set_shader_parameter("grove_tint",Color(.63,.77,.53))
-		m.set_shader_parameter("forest_air",.46 if depth_band=="backdrop" else (.27 if depth_band=="far" else (.10 if depth_band=="deep" else 0.0)))
+		# A continuous optical-distance fade supplies the air perspective in the
+		# shader. Band values only make a small allowance for the deepest groves.
+		m.set_shader_parameter("forest_air",.035 if depth_band=="backdrop" else (.020 if depth_band=="far" else (.008 if depth_band=="deep" else 0.0)))
+		if depth_band.begins_with("valley_"):m.set_shader_parameter("forest_air",.035 if depth_band=="valley_far" else .015)
+		if not layout.get("forest_extension",{}).has("layer_roles"):
+			if depth_band.begins_with("valley_") or str(node.name)=="Forest_Valley_Ground":m.set_shader_parameter("valley_air_strength",.72 if depth_band=="valley_far" else .62)
+			elif layout.get("forest_extension",{}).has("valley_enclosed") and depth_band in ["deep","far"]:m.set_shader_parameter("valley_air_strength",.60 if depth_band=="far" else .36)
+		if depth_band=="role_front":m.set_shader_parameter("grove_tint",Color(.66,.73,.55))
 		m.set_shader_parameter("sand",str(node.name)=="WALK_Left_Beach")
 		m.set_shader_parameter("author_world_to_local",$World.global_transform.affine_inverse())
 		node.set_surface_override_material(i,m)
 		node.cast_shadow=GeometryInstance3D.SHADOW_CASTING_SETTING_DOUBLE_SIDED if bamboo or grass else GeometryInstance3D.SHADOW_CASTING_SETTING_ON
+
+func _bind_bamboo_wind(mat:ShaderMaterial,node_name:String,body=false)->void:
+	var bindings:Dictionary=layout.get("forest_extension",{}).get("layer_roles",{}).get("wind_bindings",{})
+	if not bindings.has(node_name):return
+	var data:Dictionary=bindings[node_name]
+	mat.set_shader_parameter("bamboo_root",v3(data.root))
+	mat.set_shader_parameter("bamboo_height",data.height)
+	mat.set_shader_parameter("wind_seed",data.seed)
+	mat.set_shader_parameter("wind_strength",data.amplitude)
+	if body:mat.set_shader_parameter("coherent_bamboo",true)
 
 func _configure_spatial_material(node:MeshInstance3D)->void:
 	var plant=str(node.name).begins_with("Space_Bamboo")
@@ -179,7 +251,7 @@ func _build_environment()->void:
 	env.tonemap_mode=Environment.TONE_MAPPER_LINEAR
 	if layout.has("forest_extension"):
 		env.volumetric_fog_enabled=true;env.volumetric_fog_density=0.0
-		env.volumetric_fog_length=85.;env.volumetric_fog_detail_spread=1.6
+		env.volumetric_fog_length=155.0 if layout.get("forest_extension",{}).has("valley_enclosed") else 85.0;env.volumetric_fog_detail_spread=1.6
 		env.volumetric_fog_ambient_inject=.35;env.volumetric_fog_sky_affect=0.0
 	var world=WorldEnvironment.new();world.environment=env;add_child(world)
 	var sun=DirectionalLight3D.new();sun.name="CoastalSun";sun.rotation_degrees=Vector3(-41,-38,0);sun.light_color=Color("fff0ce");sun.light_energy=1.08;sun.shadow_enabled=true;sun.directional_shadow_max_distance=80;sun.shadow_bias=.018;sun.shadow_normal_bias=.23;sun.light_angular_distance=.8;add_child(sun)
@@ -187,16 +259,59 @@ func _build_environment()->void:
 	if layout.has("forest_extension"):
 		var attributes=CameraAttributesPractical.new()
 		attributes.dof_blur_near_enabled=true;attributes.dof_blur_near_distance=28.0;attributes.dof_blur_near_transition=5.0
-		attributes.dof_blur_far_enabled=true;attributes.dof_blur_far_distance=40.0;attributes.dof_blur_far_transition=21.0;attributes.dof_blur_amount=.12
+		if layout.get("forest_extension",{}).has("layer_roles"):attributes.dof_blur_near_distance=31.0
+		attributes.dof_blur_far_enabled=true;attributes.dof_blur_far_distance=40.0;attributes.dof_blur_far_transition=38.0;attributes.dof_blur_amount=.12
+		if layout.get("forest_extension",{}).get("layer_roles",{}).has("wind_bindings"):
+			attributes.dof_blur_near_distance=29.5;attributes.dof_blur_near_transition=5.5
+			attributes.dof_blur_far_distance=47.0;attributes.dof_blur_far_transition=40.0;attributes.dof_blur_amount=.095
 		camera.attributes=attributes
 		_build_forest_atmosphere()
+		if layout.get("forest_extension",{}).has("layer_roles"):_build_forest_light_openings()
+
+func _build_forest_light_openings()->void:
+	# Broad light pools relate the walking band to the slope and foliage behind it.
+	for row in [[Vector3(-25.8,18,-23),Vector3(-27.8,6,-14),1.65],[Vector3(-44.8,17,-23),Vector3(-42.5,6,-13.5),1.0]]:
+		var light=SpotLight3D.new();light.name="ForestOpeningLight"
+		light.light_color=Color("f8edbf");light.light_energy=row[2]
+		light.spot_range=23.0;light.spot_angle=30.0;light.spot_angle_attenuation=1.4
+		light.shadow_enabled=true;light.shadow_bias=.025;light.shadow_normal_bias=.08
+		$World.add_child(light);light.position=row[0];light.look_at($World.to_global(row[1]))
+
+func _register_forest_light_material(mat:ShaderMaterial,ray:Vector3)->void:
+	if not mat or not mat.shader or mat in forest_light_materials:return
+	var shared=false
+	for parameter in mat.shader.get_shader_uniform_list():
+		if parameter.name=="forest_ray_direction":shared=true;break
+	if not shared:return
+	mat.set_shader_parameter("forest_ray_direction",ray)
+	mat.set_shader_parameter("forest_sun_tint",Color("fff0ce").srgb_to_linear())
+	mat.set_shader_parameter("forest_light_strength",1.0)
+	forest_light_materials.append(mat)
+
+func _bind_forest_light_field()->void:
+	var sun=get_node("CoastalSun") as DirectionalLight3D
+	var ray:Vector3=($World.global_basis.inverse()*(-sun.global_basis.z)).normalized()
+	for node in $World.find_children("*","MeshInstance3D",true,false):
+		_register_forest_light_material(node.material_override as ShaderMaterial,ray)
+		for index in node.mesh.get_surface_count():
+			_register_forest_light_material(node.get_surface_override_material(index) as ShaderMaterial,ray)
+	for node in $World.find_children("*","FogVolume",true,false):
+		_register_forest_light_material(node.material as ShaderMaterial,ray)
 
 func _build_forest_atmosphere()->void:
-	# Real local volumes sit between the authored groves, with open intervals.
-	# The ocean and foreground remain outside these volumes.
-	for row in [[Vector3(-28,6.0,-22),Vector3(29,7,7),.052],[Vector3(-22,5.7,-30),Vector3(39,10,9),.072],[Vector3(-6.8,7.0,-18.5),Vector3(12,7,10),.038]]:
+	# Rounded, staggered pockets fade in all three dimensions. The box only
+	# bounds shader evaluation; it does not supply a visible horizontal rim.
+	var pockets=[[Vector3(-38,4.8,-27),Vector3(17,10,17),.025],[Vector3(-24,7.0,-32),Vector3(19,13,19),.032],[Vector3(-12,5.4,-26),Vector3(15,11,16),.023],[Vector3(-5.8,6.7,-19),Vector3(11,9,12),.018]]
+	if layout.get("forest_extension",{}).has("layer_roles"):
+		pockets=[[Vector3(-27,6.6,-28),Vector3(20,12,13),.026],[Vector3(-47,5.0,-35),Vector3(24,13,17),.022],[Vector3(-12,7.5,-30),Vector3(16,13,14),.020]]
+	elif layout.get("forest_extension",{}).has("valley_enclosed"):
+		pockets.append_array([[Vector3(-47,6.4,-45),Vector3(38,20,28),.085],[Vector3(-28,9.0,-64),Vector3(37,24,31),.068],[Vector3(-67,11.0,-74),Vector3(47,26,33),.074],[Vector3(-7,8.0,-50),Vector3(32,23,30),.075]])
+		pockets.append_array([[Vector3(-39,6.0,-32),Vector3(28,17,23),.070],[Vector3(-18,7.0,-36),Vector3(29,18,24),.080],[Vector3(-60,6.0,-35),Vector3(31,18,27),.075]])
+	for row in pockets:
 		var fog=FogVolume.new();fog.name="ForestAir";fog.size=row[1]
-		var mat=ShaderMaterial.new();mat.shader=preload("res://shaders/forest_local_air.gdshader");mat.set_shader_parameter("density",row[2]);fog.material=mat
+		var mat=ShaderMaterial.new();mat.shader=preload("res://shaders/forest_local_air.gdshader")
+		mat.set_shader_parameter("density",row[2]);mat.set_shader_parameter("pocket_center",row[0]);mat.set_shader_parameter("pocket_half_size",row[1]*.5)
+		mat.set_shader_parameter("author_world_to_local",$World.global_transform.affine_inverse());fog.material=mat
 		$World.add_child(fog);fog.position=row[0]
 
 func _build_hero()->void:
@@ -204,6 +319,7 @@ func _build_hero()->void:
 	# Local mip levels preserve thin linework at the current projected size.
 	var frames=preload("res://assets/characters/green_three_walk/swordsman_walk.tres").duplicate() as SpriteFrames
 	var filtered:Dictionary={}
+	var source_keys:Dictionary={}
 	for animation in frames.get_animation_names():
 		for i in frames.get_frame_count(animation):
 			var tex=frames.get_frame_texture(animation,i)
@@ -211,6 +327,7 @@ func _build_hero()->void:
 			if not filtered.has(base.resource_path):
 				var img=base.get_image();img.generate_mipmaps()
 				filtered[base.resource_path]=ImageTexture.create_from_image(img)
+				source_keys[filtered[base.resource_path].get_instance_id()]=base.resource_path.get_file().get_basename()
 			var replacement:Texture2D=filtered[base.resource_path]
 			if tex is AtlasTexture:
 				var atlas=tex.duplicate() as AtlasTexture;atlas.atlas=replacement;replacement=atlas
@@ -221,6 +338,7 @@ func _build_hero()->void:
 	hero.texture_filter=BaseMaterial3D.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS
 	hero.alpha_cut=SpriteBase3D.ALPHA_CUT_DISCARD;hero.alpha_scissor_threshold=.3;hero.shaded=true
 	hero.cast_shadow=GeometryInstance3D.SHADOW_CASTING_SETTING_DOUBLE_SIDED;add_child(hero)
+	hero_lighting.configure(self,source_keys)
 	contact=MeshInstance3D.new();contact.mesh=contact_mesh;contact.name="FootContact"
 	var m=ShaderMaterial.new();m.shader=preload("res://shaders/hero_ground_contact.gdshader");m.set_shader_parameter("strength",.19);m.set_shader_parameter("sole_contact",.06)
 	contact.material_override=m;contact.scale=Vector3(.55,1,.36);add_child(contact)
@@ -238,8 +356,8 @@ func _build_birds()->void:
 		b.name="DistantGull%d"%i;b.scale=Vector3.ONE*.7;add_child(b)
 		birds.append({"node":b,"left":b.find_child("Wing_L",true,false),"right":b.find_child("Wing_R",true,false),"phase":float(i)*1.4})
 
-func reset_actor()->void:
-	current_anchor="beach";destination="";edge_t=0.;hero.position=anchors.beach;facing="right";facing_left=false;_update_actor(false,0.,true)
+func reset_actor(start_anchor:String="beach")->void:
+	current_anchor=start_anchor;destination="";edge_t=0.;hero.position=anchors[start_anchor];facing="right";facing_left=false;_update_actor(false,0.,true)
 	camera_lead=Vector2.ZERO;_update_camera(0.,true)
 
 func _unhandled_key_input(event:InputEvent)->void:
@@ -307,10 +425,26 @@ func _update_camera(delta:float,snap=false)->void:
 	elif not camera_locked:camera_focus_world=camera_focus_world.lerp(desired,1.-exp(-3.5*delta))
 	camera_focus=_reference_pixel(camera_focus_world)
 	var offset=v3(layout.camera.get("physical_offset",[0,20.5,35.14]))
+	var fov=float(layout.camera.get("physical_fov",16.3))
+	if layout.get("forest_extension",{}).has("near_mid_depth"):
+		var p:Vector3=$World.to_local(camera_focus_world)
+		var weight=smoothstep(12.0,20.0,-p.x)*smoothstep(8.0,11.0,-p.z)
+		# Move the real camera closer. A wider view keeps the original actor
+		# size while increasing the relative scale and motion of near objects.
+		var original_distance=offset.length()
+		var pitch_sine=offset.y/original_distance
+		offset=offset.lerp(offset.normalized()*24.0,weight)
+		var distance=offset.length()
+		# Compensate the whole transition, with a fixed standing probe relative
+		# to the focus. This also keeps F5's framing independent of actor motion.
+		var reference_height=1.35/(original_distance+1.35*pitch_sine)+.75/(original_distance-.75*pitch_sine)
+		var projected_height=1.35/(distance+1.35*pitch_sine)+.75/(distance-.75*pitch_sine)
+		fov=rad_to_deg(2.0*atan(tan(deg_to_rad(fov)*.5)*projected_height/reference_height))
 	camera.keep_aspect=Camera3D.KEEP_HEIGHT
-	camera.set_perspective(float(layout.camera.get("physical_fov",16.3)),.15,800.)
+	camera.set_perspective(fov,.15,800.)
 	camera.position=camera_focus_world+offset
 	camera.look_at(camera_focus_world)
+	_update_valley_backdrop()
 
 func advance_input(input:Vector2,delta:float)->void:
 	var moving=input.length()>.1
@@ -331,7 +465,7 @@ func advance_input(input:Vector2,delta:float)->void:
 			var screen=(camera.unproject_position(b)-camera.unproject_position(a)).normalized()
 			facing="up" if screen.y<-.45 else ("down" if screen.y>.55 else "right")
 			facing_left=screen.x<0. if facing=="right" else false
-			edge_t=minf(1.,edge_t+delta*2.15/a.distance_to(b))
+			edge_t=minf(1.,edge_t+delta*MOVE_SPEED/a.distance_to(b))
 			hero.position=a.lerp(b,edge_t)
 			if edge_t>=1.:current_anchor=destination;destination="";edge_t=0.
 	# Arriving at a route node is still a walking frame. Only idle once the
@@ -350,7 +484,20 @@ func _update_actor(moving:bool,delta:float,snap=false)->void:
 	var inside=clampf((hero.position.z-anchors.cave_mouth.z)/(anchors.cave_end.z-anchors.cave_mouth.z),0.,1.) if hero.position.x>anchors.cave_mouth.x-.15 else 0.
 	var target_color=Color(.97,.97,.89).lerp(Color(.46,.58,.67),inside*.68)
 	hero.modulate=target_color if snap else hero.modulate.lerp(target_color,1.-exp(-7.*delta))
+	hero_lighting.update()
 	location_label.text="竹径" if current_anchor.begins_with("forest") else ("洞口" if current_anchor.begins_with("cave") else ("吊桥" if current_anchor.begins_with("bridge") else ""))
+
+func _update_valley_backdrop()->void:
+	if not layout.get("forest_extension",{}).has("valley_enclosed"):return
+	var p:Vector3=$World.to_local(camera_focus_world)
+	var inside=smoothstep(7.0,13.0,-p.x)*smoothstep(6.0,11.0,-p.z)
+	if layout.get("forest_extension",{}).get("layer_roles",{}).has("wind_bindings"):
+		# Near DOF also softens the transparent forest pass. Preserve readable
+		# silhouettes inside; far DOF and independent mist still supply depth.
+		camera.attributes.dof_blur_near_enabled=inside<.02
+	for mat in coastal_backdrops:mat.set_shader_parameter("opacity",1.0-inside)
+	for mat in forest_paintings:mat.set_shader_parameter("opacity",inside)
+	if sea_material:sea_material.set_shader_parameter("scene_opacity",1.0-inside)
 
 func set_route_sample(a:String,b:String,t:float)->void:
 	current_anchor=a;destination=b;edge_t=t;hero.position=(anchors[a] as Vector3).lerp(anchors[b],t);_update_actor(false,0.,true)

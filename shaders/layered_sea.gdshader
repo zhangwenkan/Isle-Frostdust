@@ -4,6 +4,10 @@ uniform sampler2D depth_texture:hint_depth_texture,filter_nearest;
 uniform vec2 shoreline[32];
 uniform mat4 author_world_to_local=mat4(1.0);
 uniform bool swash_enabled=false;
+uniform float scene_opacity=1.0;
+uniform bool forest_land_mask_enabled=false;
+uniform sampler2D forest_land_mask:filter_linear,repeat_disable;
+uniform vec4 forest_land_bounds=vec4(0.0,0.0,1.0,1.0);
 varying vec3 wp;
 void vertex(){wp=(MODEL_MATRIX*vec4(VERTEX,1.)).xyz;}
 float wave(vec2 p){return sin(p.x*2.1+p.y*.64+TIME*.82)*.38+sin(p.y*3.3-p.x*.83-TIME*.67)*.25+sin(p.x*5.4+p.y*1.9-TIME*1.1)*.1;}
@@ -37,5 +41,13 @@ void fragment(){
     // into that middle layer instead of painting over the mountains and sky.
     float fade=1.-smoothstep(10.,36.,-wp.z+sin(wp.x*.15)*2.1);
     float transmission=swash_enabled?shore*exp(-thickness*.95):0.0;
-    ALBEDO=col;ALPHA=fade*mix(1.0,.20,transmission);
+    // The inland valley falls below the ocean plane. Its authored footprint
+    // stays dry; otherwise this transparent sea paints over the rear groves.
+    float inland=0.0;
+    if(forest_land_mask_enabled){
+        vec2 land_uv=(local_shore-forest_land_bounds.xy)/forest_land_bounds.zw;
+        float in_bounds=step(0.0,land_uv.x)*step(0.0,land_uv.y)*step(land_uv.x,1.0)*step(land_uv.y,1.0);
+        inland=texture(forest_land_mask,land_uv).r*in_bounds*smoothstep(24.0,29.0,-local_shore.y);
+    }
+    ALBEDO=col;ALPHA=fade*mix(1.0,.20,transmission)*(1.0-inland)*scene_opacity;
 }

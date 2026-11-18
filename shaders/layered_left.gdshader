@@ -4,6 +4,7 @@ uniform sampler2D painting : source_color, filter_linear_mipmap_anisotropic, rep
 uniform vec4 tint : source_color = vec4(1.0);
 uniform vec4 grove_tint : source_color = vec4(1.0);
 uniform float forest_air=0.0;
+uniform float valley_air_strength=0.0;
 uniform bool use_texture=true;
 uniform bool vertex_tint=false;
 uniform bool sand=false;
@@ -15,6 +16,7 @@ uniform float wind_strength=0.0;
 uniform mat4 author_world_to_local=mat4(1.0);
 varying vec3 authored_position;
 varying vec3 world_position;
+varying float optical_depth;
 void vertex(){
     vec3 wp=(MODEL_MATRIX*vec4(VERTEX,1.0)).xyz;
     authored_position=(author_world_to_local*vec4(wp,1.0)).xyz;
@@ -23,6 +25,7 @@ void vertex(){
     VERTEX.x+=gust*UV2.x*wind_strength;
     VERTEX.z+=sin(TIME*.71+wp.x*.40)*UV2.x*wind_strength*.27;
     world_position=(MODEL_MATRIX*vec4(VERTEX,1.0)).xyz;
+    optical_depth=-(VIEW_MATRIX*vec4(world_position,1.0)).z;
 }
 void fragment(){
     vec3 color=(use_texture?texture(painting,UV).rgb:vec3(1.0))*tint.rgb;
@@ -43,8 +46,11 @@ void fragment(){
         color=mix(color,color*vec3(.66,.73,.79),wet*.72);
         ROUGHNESS=mix(.97,.66,wet);
     }else{ROUGHNESS=.97;}
-    ALBEDO=color*grove_tint.rgb*(1.0-forest_air);SPECULAR=.06;
-    // Opaque woodland retains correct depth while local air reduces distant
-    // contrast. This supplements the actual volumes between the nearer rows.
-    EMISSION=vec3(.12,.16,.11)*forest_air;
+    // Air accumulates smoothly behind the activity band. Leaf tips and roots
+    // receive their own view depth rather than one uniform color per grove.
+    float distance_air=1.0-exp(-max(optical_depth-39.0,0.0)*.008);
+    float air=vertex_tint?min(.24,distance_air+forest_air*smoothstep(42.0,78.0,optical_depth)):0.0;
+    air=max(air,valley_air_strength*(1.0-exp(-max(optical_depth-38.0,0.0)*.04)));
+    ALBEDO=color*grove_tint.rgb*(1.0-air);SPECULAR=.06;
+    EMISSION=mix(vec3(.055,.073,.061),vec3(.18,.205,.15),step(.01,valley_air_strength))*air;
 }

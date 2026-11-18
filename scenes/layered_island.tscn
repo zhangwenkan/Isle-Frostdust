@@ -6,5 +6,5 @@
 [node name="LayeredIsland" type="Node3D" unique_id=1272102279]
 script = ExtResource("1")
 
-[node name="World" parent="." unique_id=117574502 instance=ExtResource("2")]
-transform = Transform3D(1, 0, 0, 0, 0.96453446, -0.26395723, 0, 0.26395723, 0.96453446, 29.483004, -4.8720255, 10.492704)
+[node name="World" parent="." unique_id=36215100 instance=ExtResource("2")]
+transform = Transform3D(0.9997613, 0.0057674083, 0.021074869, 0, 0.96453446, -0.26395723, -0.021849783, 0.26389423, 0.9643042, 29.483004, -4.8720255, 10.492704)
