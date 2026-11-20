@@ -1,0 +1,89 @@
+{
+  "revision": "fresh-cape-stone-steps-clarity-5",
+  "source": "empty Blender scene through MCP",
+  "imported_geometry": [],
+  "mesh_objects": 391,
+  "hero_blender": [
+    -2.7,
+    -1.15,
+    3.16
+  ],
+  "top_height": 3.13,
+  "stairs": [
+    {
+      "name": "Upper_Flight_Tread_00.001",
+      "top": 3.086512565612793,
+      "bottom": 2.7685048580169678
+    },
+    {
+      "name": "Upper_Flight_Tread_01_Part_0",
+      "top": 2.8415110111236572,
+      "bottom": 2.505635976791382
+    },
+    {
+      "name": "Upper_Flight_Tread_01_Part_1",
+      "top": 2.841507911682129,
+      "bottom": 2.5057108402252197
+    },
+    {
+      "name": "Upper_Flight_Tread_02.001",
+      "top": 2.59651255607605,
+      "bottom": 2.278491258621216
+    },
+    {
+      "name": "Upper_Flight_Tread_03.001",
+      "top": 2.3515126705169678,
+      "bottom": 2.0155091285705566
+    },
+    {
+      "name": "Upper_Flight_Tread_04_Part_0",
+      "top": 2.106511116027832,
+      "bottom": 1.7886251211166382
+    },
+    {
+      "name": "Upper_Flight_Tread_04_Part_1",
+      "top": 2.106508255004883,
+      "bottom": 1.7887036800384521
+    },
+    {
+      "name": "Lower_Flight_Tread_00_Part_0",
+      "top": 1.6166208982467651,
+      "bottom": 1.2982765436172485
+    },
+    {
+      "name": "Lower_Flight_Tread_00_Part_1",
+      "top": 1.6166179180145264,
+      "bottom": 1.2986104488372803
+    },
+    {
+      "name": "Lower_Flight_Tread_01.001",
+      "top": 1.3716224431991577,
+      "bottom": 1.0348104238510132
+    },
+    {
+      "name": "Lower_Flight_Tread_02.001",
+      "top": 1.1266224384307861,
+      "bottom": 0.8077645897865295
+    },
+    {
+      "name": "Lower_Flight_Tread_03_Part_0",
+      "top": 0.8816208243370056,
+      "bottom": 0.5453130602836609
+    },
+    {
+      "name": "Lower_Flight_Tread_03_Part_1",
+      "top": 0.8816176652908325,
+      "bottom": 0.5456342697143555
+    },
+    {
+      "name": "Lower_Flight_Tread_04.001",
+      "top": 0.6366224884986877,
+      "bottom": 0.3177926540374756
+    },
+    {
+      "name": "Lower_Flight_Tread_05.001",
+      "top": 0.3916223347187042,
+      "bottom": 0.054835401475429535
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-19",
+  "bounds": [
+    -74.0,
+    -5.0,
+    24.0,
+    33.0
+  ],
+  "source_images": [
+    "forest_extension/forest_floor.png",
+    "reference_cape/platform.png"
+  ],
+  "registration": "Existing Blender UV triangles rasterized; western UV direction continued; no clamp to one edge color",
+  "painting": "Broad irregular grass/soil/stone groups and a continuous walking strip; no added noise, AI images or geometry"
+}

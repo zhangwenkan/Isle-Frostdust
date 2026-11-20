@@ -1,0 +1,391 @@
+{
+  "scene": "Coast_Structure_Recovery_20261120",
+  "revision": "coast-structure-recovery-9",
+  "replace": [
+    "WALK_Forest_Ground",
+    "Cape_Terminus_Bedrock",
+    "Forest_Strict_Grass",
+    "Forest_Strict_Understory",
+    "Forest_Strict_Flowers",
+    "WALK_Cape_Sand",
+    "Cape_Swash_Film",
+    "Cape_Strict_Paving",
+    "Cape_Timber_Seat",
+    "Cape_Timber_Endgrain",
+    "Cape_Fire_Ring_00",
+    "Cape_Fire_Ring_01",
+    "Cape_Fire_Ring_02",
+    "Cape_Fire_Ring_03",
+    "Cape_Fire_Ring_04",
+    "Cape_Fire_Ring_05",
+    "Cape_Fire_Ring_06",
+    "Cape_Fire_Ring_07",
+    "Cape_Fire_Ring_08",
+    "Cape_Fire_Ring_09",
+    "Cape_Fire_Log_00",
+    "Cape_Fire_Log_01",
+    "Cape_Fire_Log_02",
+    "Cape_Fire_Log_03",
+    "Cape_Fire_Log_04",
+    "WALK_Cape_Stairs"
+  ],
+  "objects": {
+    "Recovery_WALK_Forest_Ground": {
+      "source_scene": "Coast_Recovery_Strict_Baseline_20261120",
+      "source_object": "WALK_Forest_Ground.001",
+      "vertices": 13949
+    },
+    "Recovery_Cape_Terminus_Bedrock": {
+      "source_scene": "Coast_Recovery_Strict_Baseline_20261120",
+      "source_object": "Cape_Terminus_Bedrock.001",
+      "vertices": 2016
+    },
+    "Recovery_Forest_Strict_Grass": {
+      "source_scene": "Coast_Recovery_Strict_Baseline_20261120",
+      "source_object": "Forest_Strict_Grass.001",
+      "vertices": 40020
+    },
+    "Recovery_Forest_Strict_Understory": {
+      "source_scene": "Coast_Recovery_Strict_Baseline_20261120",
+      "source_object": "Forest_Strict_Understory.001",
+      "vertices": 18000
+    },
+    "Recovery_Forest_Strict_Flowers": {
+      "source_scene": "Coast_Recovery_Strict_Baseline_20261120",
+      "source_object": "Forest_Strict_Flowers.001",
+      "vertices": 11088
+    },
+    "Recovery_WALK_Cape_Sand": {
+      "source_scene": "Coast_Recovery_Original_Readonly_20261120",
+      "source_object": "WALK_Cape_Sand.003",
+      "vertices": 736
+    },
+    "Recovery_Cape_Swash_Film": {
+      "source_scene": "Coast_Recovery_Original_Readonly_20261120",
+      "source_object": "Cape_Swash_Film",
+      "vertices": 736
+    },
+    "Recovery_Cape_Strict_Paving": {
+      "source_scene": "Coast_Recovery_Original_Readonly_20261120",
+      "source_object": "Cape_Strict_Paving",
+      "vertices": 2280
+    },
+    "Recovery_Cape_Timber_Seat": {
+      "source_scene": "Coast_Recovery_Original_Readonly_20261120",
+      "source_object": "Cape_Timber_Seat",
+      "vertices": 24
+    },
+    "Recovery_Cape_Timber_Endgrain": {
+      "source_scene": "Coast_Recovery_Original_Readonly_20261120",
+      "source_object": "Cape_Timber_Endgrain",
+      "vertices": 24
+    },
+    "Recovery_Cape_Fire_Ring_00": {
+      "source_scene": "Coast_Recovery_Original_Readonly_20261120",
+      "source_object": "Cape_Fire_Ring_00",
+      "vertices": 91
+    },
+    "Recovery_Cape_Fire_Ring_01": {
+      "source_scene": "Coast_Recovery_Original_Readonly_20261120",
+      "source_object": "Cape_Fire_Ring_01",
+      "vertices": 91
+    },
+    "Recovery_Cape_Fire_Ring_02": {
+      "source_scene": "Coast_Recovery_Original_Readonly_20261120",
+      "source_object": "Cape_Fire_Ring_02",
+      "vertices": 91
+    },
+    "Recovery_Cape_Fire_Ring_03": {
+      "source_scene": "Coast_Recovery_Original_Readonly_20261120",
+      "source_object": "Cape_Fire_Ring_03",
+      "vertices": 91
+    },
+    "Recovery_Cape_Fire_Ring_04": {
+      "source_scene": "Coast_Recovery_Original_Readonly_20261120",
+      "source_object": "Cape_Fire_Ring_04",
+      "vertices": 91
+    },
+    "Recovery_Cape_Fire_Ring_05": {
+      "source_scene": "Coast_Recovery_Original_Readonly_20261120",
+      "source_object": "Cape_Fire_Ring_05",
+      "vertices": 91
+    },
+    "Recovery_Cape_Fire_Ring_06": {
+      "source_scene": "Coast_Recovery_Original_Readonly_20261120",
+      "source_object": "Cape_Fire_Ring_06",
+      "vertices": 91
+    },
+    "Recovery_Cape_Fire_Ring_07": {
+      "source_scene": "Coast_Recovery_Original_Readonly_20261120",
+      "source_object": "Cape_Fire_Ring_07",
+      "vertices": 91
+    },
+    "Recovery_Cape_Fire_Ring_08": {
+      "source_scene": "Coast_Recovery_Original_Readonly_20261120",
+      "source_object": "Cape_Fire_Ring_08",
+      "vertices": 91
+    },
+    "Recovery_Cape_Fire_Ring_09": {
+      "source_scene": "Coast_Recovery_Original_Readonly_20261120",
+      "source_object": "Cape_Fire_Ring_09",
+      "vertices": 91
+    },
+    "Recovery_Cape_Fire_Log_00": {
+      "source_scene": "Coast_Recovery_Original_Readonly_20261120",
+      "source_object": "Cape_Fire_Log_00",
+      "vertices": 18
+    },
+    "Recovery_Cape_Fire_Log_01": {
+      "source_scene": "Coast_Recovery_Original_Readonly_20261120",
+      "source_object": "Cape_Fire_Log_01",
+      "vertices": 18
+    },
+    "Recovery_Cape_Fire_Log_02": {
+      "source_scene": "Coast_Recovery_Original_Readonly_20261120",
+      "source_object": "Cape_Fire_Log_02",
+      "vertices": 18
+    },
+    "Recovery_Cape_Fire_Log_03": {
+      "source_scene": "Coast_Recovery_Original_Readonly_20261120",
+      "source_object": "Cape_Fire_Log_03",
+      "vertices": 18
+    },
+    "Recovery_Cape_Fire_Log_04": {
+      "source_scene": "Coast_Recovery_Original_Readonly_20261120",
+      "source_object": "Cape_Fire_Log_04",
+      "vertices": 18
+    },
+    "Recovery_WALK_Cape_Stairs": {
+      "source_scene": "Coast_Recovery_Original_Readonly_20261120",
+      "source_object": "WALK_Left_Stairs_00",
+      "vertices": 2944
+    }
+  },
+  "source_stair": "WALK_Left_Stairs_00",
+  "stair_steps": 15,
+  "anchors": {
+    "forest_cape_approach": [
+      -52.20000076293945,
+      5.9027252197265625,
+      -13.699999809265137
+    ],
+    "forest_cape_exit": [
+      -57.0,
+      4.5262932777404785,
+      -13.699999809265137
+    ],
+    "cape_neck": [
+      -59.599998474121094,
+      3.994835138320923,
+      -13.649999618530273
+    ],
+    "cape_entry": [
+      -61.400001525878906,
+      3.8972249031066895,
+      -13.399999618530273
+    ],
+    "cape_center": [
+      -63.29999923706055,
+      3.863358974456787,
+      -12.800000190734863
+    ],
+    "cape_stair_top": [
+      -63.29999923706055,
+      3.8563997745513916,
+      -8.800000190734863
+    ],
+    "cape_stair_bottom": [
+      -62.5,
+      0.15000000596046448,
+      -4.0
+    ],
+    "cape_sand": [
+      -65.93500518798828,
+      0.11999999731779099,
+      5.099999904632568
+    ],
+    "cape_shore_end": [
+      -71.5250015258789,
+      0.10000000149011612,
+      3.299999952316284
+    ]
+  },
+  "fire_center": [
+    -65.82749938964844,
+    3.889911651611328,
+    -13.050000190734863
+  ],
+  "shoreline": [
+    [
+      -73.67500305175781,
+      1.7
+    ],
+    [
+      -72.70402526855469,
+      2.4124548943342554
+    ],
+    [
+      -71.7330551147461,
+      2.9717710884678326
+    ],
+    [
+      -70.76210021972656,
+      3.513156470911521
+    ],
+    [
+      -69.79113006591797,
+      4.0664032709073705
+    ],
+    [
+      -68.82015991210938,
+      4.640316970788596
+    ],
+    [
+      -67.84918975830078,
+      5.229491820952925
+    ],
+    [
+      -66.87821960449219,
+      5.817512002832258
+    ],
+    [
+      -65.90726470947266,
+      6.380399356068291
+    ],
+    [
+      -64.93629455566406,
+      6.890727533925244
+    ],
+    [
+      -63.98387145996094,
+      7.32205879917763
+    ],
+    [
+      -63.532257080078125,
+      7.653117559469942
+    ],
+    [
+      -63.08064651489258,
+      7.87108811584908
+    ],
+    [
+      -62.629032135009766,
+      7.973536338965761
+    ],
+    [
+      -62.17741775512695,
+      7.968663605238322
+    ],
+    [
+      -61.725807189941406,
+      7.873863856787243
+    ],
+    [
+      -61.274192810058594,
+      7.712825040716315
+    ],
+    [
+      -60.82258224487305,
+      7.511649033162488
+    ],
+    [
+      -60.370967864990234,
+      7.294620932969961
+    ],
+    [
+      -59.91935348510742,
+      7.080313456386591
+    ],
+    [
+      -59.467742919921875,
+      6.878655864376978
+    ],
+    [
+      -59.01612854003906,
+      6.689438209627473
+    ],
+    [
+      -58.564517974853516,
+      6.502485963900377
+    ],
+    [
+      -58.1129035949707,
+      6.299464698478344
+    ],
+    [
+      -57.66128921508789,
+      6.0570025012109445
+    ],
+    [
+      -57.209678649902344,
+      5.750589807130703
+    ],
+    [
+      -56.75806427001953,
+      5.358560602445189
+    ],
+    [
+      -56.30644989013672,
+      4.865376476644213
+    ],
+    [
+      -55.85483932495117,
+      4.263358176629186
+    ],
+    [
+      -55.40322494506836,
+      3.5516053182511294
+    ],
+    [
+      -54.95161437988281,
+      2.727939578424911
+    ],
+    [
+      -54.5,
+      1.7000000000001823
+    ]
+  ],
+  "retire_extra": [
+    "Cape_Stair_Support"
+  ],
+  "local_rocks": [
+    {
+      "name": "West",
+      "source_bounds": [
+        -0.51,
+        -0.06,
+        -0.39,
+        0.1,
+        -0.01,
+        0.335
+      ],
+      "placement_offset": [
+        -2.1,
+        1.2,
+        0.12
+      ]
+    },
+    {
+      "name": "StairRight",
+      "source_bounds": [
+        0.115,
+        0.51,
+        -0.39,
+        0.08,
+        -0.01,
+        0.325
+      ],
+      "placement_offset": [
+        -0.05,
+        -0.25,
+        0.1
+      ]
+    }
+  ],
+  "local_rocks_source": "Grit_Delivery_Rocks, clipped along measured stair flanks, two embedded partial exposures",
+  "edge_core_segments": 15,
+  "material_scope": "local registered grass-earth clearing; broad core wash; retained measured rock albedo",
+  "core_normals": "all quads face outward from their shared terrain border",
+  "reused_grass_clumps": 12,
+  "source_floor_uv": "original forest UV preserved; local floor painting is registered by Godot integration"
+}

@@ -1,0 +1,102 @@
+{
+  "scene": "Tripo_Game_Assembly_20261119",
+  "scale": 14.124999999999998,
+  "angle_radians": 0.444636611540415,
+  "origin_blender": [
+    -64.3353271484375,
+    10.150753021240234,
+    -0.9884750843048096
+  ],
+  "copied_clips": [
+    {
+      "name": "GameJoin_WALK_Forest_Ground",
+      "original": "WALK_Forest_Ground",
+      "before_faces": 27332,
+      "removed_faces": 1275,
+      "after_faces": 26565
+    },
+    {
+      "name": "GameJoin_Cape_Terminus_Bedrock",
+      "original": "Cape_Terminus_Bedrock",
+      "before_faces": 1213,
+      "removed_faces": 530,
+      "after_faces": 713
+    },
+    {
+      "name": "GameJoin_Forest_Strict_Grass",
+      "original": "Forest_Strict_Grass",
+      "before_faces": 21344,
+      "removed_faces": 1036,
+      "after_faces": 20351
+    },
+    {
+      "name": "GameJoin_Forest_Strict_Understory",
+      "original": "Forest_Strict_Understory",
+      "before_faces": 9600,
+      "removed_faces": 634,
+      "after_faces": 9098
+    },
+    {
+      "name": "GameJoin_Forest_Strict_Flowers",
+      "original": "Forest_Strict_Flowers",
+      "before_faces": 4356,
+      "removed_faces": 231,
+      "after_faces": 4129
+    },
+    {
+      "name": "GameJoin_WALK_Cape_Sand",
+      "original": "WALK_Cape_Sand",
+      "method": "Original height restored after contact-overlay interference; unchanged copy retained in addon",
+      "changed_vertices": 0
+    }
+  ],
+  "sample_anchors": {
+    "cape_center": [
+      -64.73688507080078,
+      4.025899887084961,
+      -10.98138427734375
+    ],
+    "cape_stair_top": [
+      -63.14020919799805,
+      3.8563997745513916,
+      -7.841248989105225
+    ],
+    "cape_stair_bottom": [
+      -62.415443420410156,
+      0.1697748899459839,
+      -3.4926652908325195
+    ],
+    "fire_center": [
+      -65.6959228515625,
+      4.110650062561035,
+      -10.312396049499512
+    ]
+  },
+  "placement_matrix": [
+    [
+      12.751585006713867,
+      -6.0755839347839355,
+      0.0,
+      -64.3353271484375
+    ],
+    [
+      6.0755839347839355,
+      12.751585006713867,
+      0.0,
+      10.150753021240234
+    ],
+    [
+      0.0,
+      0.0,
+      14.125,
+      -0.9884750843048096
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "revision": "rock-cape-weight-game-4"
+}

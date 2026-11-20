@@ -1,0 +1,15 @@
+{
+  "bounds": [
+    -68.0,
+    4.0,
+    18.0,
+    31.0
+  ],
+  "sources": [
+    "forest_extension/forest_floor.png",
+    "reference_cape/platform.png"
+  ],
+  "registration": "Preserved original Blender UV triangles; reflected nearest west strip into new ground",
+  "shapes": "One compact camp opening, a path finger and root/near exposed rock groups. No added fine noise.",
+  "model_geometry_changed_by_this_script": false
+}

@@ -1,20 +1,20 @@
 {
   "source": "assets\\layered_island\\layered_island.glb",
-  "source_sha256": "cf693698182457c2eef4f95c75142a9550688198904b798ee48bb167b41a5e1f",
+  "source_sha256": "0a159e0cc60204372fbab582e8ced61d8df1ccb0bb4b225d28a1e446bbedee34",
   "floors": [
     "WALK_Forest_Ground"
   ],
   "bounds": [
-    -62.2400016784668,
+    -68.3499984741211,
     -35.0,
-    64.44000172615051,
-    32.74000000953674
+    70.54999852180481,
+    39.48773646354675
   ],
   "size": [
     1024,
     576
   ],
-  "triangles_read": 18832,
+  "triangles_read": 27065,
   "purpose": "Exclude the physical ocean from the existing inland forest valley. White is dry land.",
   "changes_geometry_or_uv": false
 }

@@ -1,6 +1,7 @@
 shader_type spatial;
 render_mode unshaded,cull_disabled,depth_prepass_alpha,fog_disabled;
 #include "res://shaders/forest_sun_field.gdshaderinc"
+#include "res://shaders/forest_coastal_edge.gdshaderinc"
 uniform sampler2D painting:source_color,filter_linear_mipmap,repeat_disable;
 uniform float opacity=1.0;
 uniform float layer=0.0;
@@ -19,5 +20,5 @@ void fragment(){
     vec4 c=texture(painting,UV);
     float t=time_override>=0.0?time_override:TIME;
     ALBEDO=forest_painted_light(c.rgb,authored_position,t);
-    ALPHA=c.a*opacity;
+    ALPHA=c.a*opacity*terminal_forest_edge(authored_position);
 }

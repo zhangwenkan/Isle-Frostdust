@@ -1,0 +1,6 @@
+{
+  "source": "Project-owned painted fields, selected fracture lines and leaf-axis shading. No reference pixels copied.",
+  "author": "tools/paint_strict_forest_coast.py",
+  "reference": "artifacts/forest-rocky-terminus-study/reference/user-forest-coast.png",
+  "geometry": "Produced separately inside Blender through blender-mcp"
+}

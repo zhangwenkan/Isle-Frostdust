@@ -2,6 +2,7 @@ shader_type spatial;
 render_mode cull_disabled, diffuse_burley;
 #include "res://shaders/forest_role_light.gdshaderinc"
 #include "res://shaders/forest_bamboo_wind.gdshaderinc"
+#include "res://shaders/cape_forest_floor.gdshaderinc"
 uniform sampler2D painting : source_color, filter_linear_mipmap_anisotropic, repeat_enable;
 uniform vec4 tint : source_color = vec4(1.0);
 uniform vec4 grove_tint : source_color = vec4(1.0);
@@ -25,7 +26,9 @@ uniform mat4 author_world_to_local=mat4(1.0);
 varying vec3 authored_position;
 varying vec3 world_position;
 varying float optical_depth;
+varying float continuity_upward;
 void vertex(){
+    continuity_upward=abs(NORMAL.y);
     vec3 wp=(MODEL_MATRIX*vec4(VERTEX,1.0)).xyz;
     authored_position=(author_world_to_local*vec4(wp,1.0)).xyz;
     float t=wind_time_override>=0.0?wind_time_override:TIME;
@@ -41,6 +44,7 @@ void vertex(){
 }
 void fragment(){
     vec3 color=(use_texture?texture(painting,UV).rgb:vec3(1.0))*tint.rgb;
+    color=continuity_color(color,authored_position,continuity_upward);
     if(vertex_tint)color*=COLOR.rgb;
     if(foliage)color*=vec3(1.12,1.13,1.04);
     if(actor_clearance){

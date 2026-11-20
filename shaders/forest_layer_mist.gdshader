@@ -1,6 +1,7 @@
 shader_type spatial;
 render_mode unshaded,cull_disabled,depth_draw_never,fog_disabled;
 #include "res://shaders/forest_sun_field.gdshaderinc"
+#include "res://shaders/forest_coastal_edge.gdshaderinc"
 uniform float opacity=1.0;
 uniform float layer=0.0;
 uniform vec4 fog_color:source_color=vec4(.59,.65,.53,1.0);
@@ -25,5 +26,5 @@ void fragment(){
     float sun=forest_aperture(authored_position,t);
     vec3 shade=fog_color.rgb*(.57+.08*large)+forest_sun_tint.rgb*sun*.20;
     ALBEDO=mix(fog_color.rgb*(.92+.08*large),shade,forest_light_strength);
-    ALPHA=veil*edges*pockets*opacity*(.30-layer*.018);
+    ALPHA=veil*edges*pockets*opacity*(.30-layer*.018)*terminal_forest_edge(authored_position);
 }

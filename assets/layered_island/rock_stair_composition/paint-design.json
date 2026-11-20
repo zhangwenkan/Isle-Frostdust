@@ -1,0 +1,104 @@
+[
+  {
+    "object": "Cape_Strict_Rock_Sea_West",
+    "texture": "D:\\自己做着玩的\\孤屿霜尘\\assets\\layered_island\\rock_stair_composition\\Cape_Strict_Rock_Sea_West.png",
+    "strokes_on_face_sides": 12,
+    "projection": "six continuous physical-axis islands registered to actual facets"
+  },
+  {
+    "object": "Cape_Strict_Rock_Sea_Front",
+    "texture": "D:\\自己做着玩的\\孤屿霜尘\\assets\\layered_island\\rock_stair_composition\\Cape_Strict_Rock_Sea_Front.png",
+    "strokes_on_face_sides": 11,
+    "projection": "six continuous physical-axis islands registered to actual facets"
+  },
+  {
+    "object": "Cape_Strict_Rock_Stair_Left",
+    "texture": "D:\\自己做着玩的\\孤屿霜尘\\assets\\layered_island\\rock_stair_composition\\Cape_Strict_Rock_Stair_Left.png",
+    "strokes_on_face_sides": 12,
+    "projection": "six continuous physical-axis islands registered to actual facets"
+  },
+  {
+    "object": "Cape_Strict_Rock_Stair_Right",
+    "texture": "D:\\自己做着玩的\\孤屿霜尘\\assets\\layered_island\\rock_stair_composition\\Cape_Strict_Rock_Stair_Right.png",
+    "strokes_on_face_sides": 12,
+    "projection": "six continuous physical-axis islands registered to actual facets"
+  },
+  {
+    "object": "Cape_Strict_Rock_Root_West",
+    "texture": "D:\\自己做着玩的\\孤屿霜尘\\assets\\layered_island\\rock_stair_composition\\Cape_Strict_Rock_Root_West.png",
+    "strokes_on_face_sides": 12,
+    "projection": "six continuous physical-axis islands registered to actual facets"
+  },
+  {
+    "object": "Cape_Strict_Rock_Root_Mid",
+    "texture": "D:\\自己做着玩的\\孤屿霜尘\\assets\\layered_island\\rock_stair_composition\\Cape_Strict_Rock_Root_Mid.png",
+    "strokes_on_face_sides": 13,
+    "projection": "six continuous physical-axis islands registered to actual facets"
+  },
+  {
+    "object": "Cape_Strict_Rock_Root_East",
+    "texture": "D:\\自己做着玩的\\孤屿霜尘\\assets\\layered_island\\rock_stair_composition\\Cape_Strict_Rock_Root_East.png",
+    "strokes_on_face_sides": 13,
+    "projection": "six continuous physical-axis islands registered to actual facets"
+  },
+  {
+    "object": "Cape_Strict_Rock_Toe_West",
+    "texture": "D:\\自己做着玩的\\孤屿霜尘\\assets\\layered_island\\rock_stair_composition\\Cape_Strict_Rock_Toe_West.png",
+    "strokes_on_face_sides": 12,
+    "projection": "six continuous physical-axis islands registered to actual facets"
+  },
+  {
+    "object": "Cape_Strict_Rock_Toe_West_Inset",
+    "texture": "D:\\自己做着玩的\\孤屿霜尘\\assets\\layered_island\\rock_stair_composition\\Cape_Strict_Rock_Toe_West_Inset.png",
+    "strokes_on_face_sides": 12,
+    "projection": "six continuous physical-axis islands registered to actual facets"
+  },
+  {
+    "object": "Cape_Strict_Rock_Toe_Right",
+    "texture": "D:\\自己做着玩的\\孤屿霜尘\\assets\\layered_island\\rock_stair_composition\\Cape_Strict_Rock_Toe_Right.png",
+    "strokes_on_face_sides": 13,
+    "projection": "six continuous physical-axis islands registered to actual facets"
+  },
+  {
+    "object": "Cape_Strict_Rock_Toe_Right_Low",
+    "texture": "D:\\自己做着玩的\\孤屿霜尘\\assets\\layered_island\\rock_stair_composition\\Cape_Strict_Rock_Toe_Right_Low.png",
+    "strokes_on_face_sides": 13,
+    "projection": "six continuous physical-axis islands registered to actual facets"
+  },
+  {
+    "object": "Cape_Strict_Rock_Near_Upper",
+    "texture": "D:\\自己做着玩的\\孤屿霜尘\\assets\\layered_island\\rock_stair_composition\\Cape_Strict_Rock_Near_Upper.png",
+    "strokes_on_face_sides": 12,
+    "projection": "six continuous physical-axis islands registered to actual facets"
+  },
+  {
+    "object": "Cape_Strict_Rock_Near_Lower",
+    "texture": "D:\\自己做着玩的\\孤屿霜尘\\assets\\layered_island\\rock_stair_composition\\Cape_Strict_Rock_Near_Lower.png",
+    "strokes_on_face_sides": 12,
+    "projection": "six continuous physical-axis islands registered to actual facets"
+  },
+  {
+    "object": "Cape_Strict_Rock_Near_Seam",
+    "texture": "D:\\自己做着玩的\\孤屿霜尘\\assets\\layered_island\\rock_stair_composition\\Cape_Strict_Rock_Near_Seam.png",
+    "strokes_on_face_sides": 13,
+    "projection": "six continuous physical-axis islands registered to actual facets"
+  },
+  {
+    "object": "Cape_Terminus_Bedrock",
+    "texture": "D:\\自己做着玩的\\孤屿霜尘\\assets\\layered_island\\rock_stair_composition\\Cape_Terminus_Bedrock.png",
+    "strokes_on_face_sides": 8,
+    "projection": "six continuous physical-axis islands registered to actual facets"
+  },
+  {
+    "object": "WALK_Cape_Stairs",
+    "texture": "D:\\自己做着玩的\\孤屿霜尘\\assets\\layered_island\\rock_stair_composition\\WALK_Cape_Stairs.png",
+    "strokes_on_face_sides": 0,
+    "projection": "six continuous physical-axis islands registered to actual facets"
+  },
+  {
+    "object": "Cape_Stair_Support",
+    "texture": "D:\\自己做着玩的\\孤屿霜尘\\assets\\layered_island\\rock_stair_composition\\Cape_Stair_Support.png",
+    "strokes_on_face_sides": 0,
+    "projection": "six continuous physical-axis islands registered to actual facets"
+  }
+]

@@ -1,0 +1,85 @@
+{
+  "reference": "artifacts/reference-cape-review/reference/user-cape.png",
+  "ownership": "User supplied generated reference; existing raster edit, no new AI image generation",
+  "maps": {
+    "rock_side": {
+      "reference_crop": [
+        1965,
+        1082,
+        2030,
+        1215
+      ],
+      "size": [
+        512,
+        512
+      ],
+      "processing": "softened contrast, color balance and mirrored tile; no generated noise"
+    },
+    "rock_top": {
+      "reference_crop": [
+        1500,
+        865,
+        1648,
+        919
+      ],
+      "size": [
+        512,
+        512
+      ],
+      "processing": "softened contrast, color balance and mirrored tile; no generated noise"
+    },
+    "sand": {
+      "reference_crop": [
+        1720,
+        1560,
+        1870,
+        1664
+      ],
+      "size": [
+        512,
+        512
+      ],
+      "processing": "softened contrast, color balance and mirrored tile; no generated noise"
+    },
+    "wood": {
+      "reference_crop": [
+        1868,
+        891,
+        1940,
+        916
+      ],
+      "size": [
+        512,
+        128
+      ],
+      "processing": "softened contrast, color balance and mirrored tile; no generated noise"
+    },
+    "tread": {
+      "reference_crop": [
+        1767,
+        1080,
+        1822,
+        1110
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "processing": "softened contrast, color balance and mirrored tile; no generated noise"
+    },
+    "platform": {
+      "derived_from": "rock_top",
+      "world_bounds": [
+        -84,
+        5,
+        -67,
+        18
+      ],
+      "fire_contact_center": [
+        -76,
+        13.1
+      ],
+      "paint": "five selective structural joints and localized charcoal wash"
+    }
+  }
+}

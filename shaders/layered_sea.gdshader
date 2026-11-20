@@ -5,6 +5,11 @@ uniform vec2 shoreline[32];
 uniform mat4 author_world_to_local=mat4(1.0);
 uniform bool swash_enabled=false;
 uniform float scene_opacity=1.0;
+uniform bool cape_enabled=false;
+uniform float cape_palette=0.0;
+uniform vec2 cape_region=vec2(-70.0,-61.0);
+uniform float cape_reflection_x=-101.0;
+uniform vec2 cape_shoreline[32];
 uniform bool forest_land_mask_enabled=false;
 uniform sampler2D forest_land_mask:filter_linear,repeat_disable;
 uniform vec4 forest_land_bounds=vec4(0.0,0.0,1.0,1.0);
@@ -18,10 +23,18 @@ void fragment(){
     float thickness=max(0.,-behind.z+VERTEX.z);
     float coast_distance=1000.;
     vec2 local_shore=(author_world_to_local*vec4(wp,1.)).xz;
+    float cape_zone=cape_enabled?(1.0-smoothstep(cape_region.x,cape_region.y,local_shore.x))*cape_palette:0.0;
     for(int i=0;i<31;i++){
         vec2 a=shoreline[i], b=shoreline[i+1], ab=b-a;
         float t=clamp(dot(local_shore-a,ab)/max(dot(ab,ab),.00001),0.,1.);
         coast_distance=min(coast_distance,length(local_shore-(a+ab*t)));
+    }
+    if(cape_enabled){
+        for(int i=0;i<31;i++){
+            vec2 a=cape_shoreline[i],b=cape_shoreline[i+1],ab=b-a;
+            float t=clamp(dot(local_shore-a,ab)/max(dot(ab,ab),.00001),0.0,1.0);
+            coast_distance=min(coast_distance,length(local_shore-(a+ab*t)));
+        }
     }
     float shore=1.-smoothstep(.05,1.8,coast_distance);
     float farwater=smoothstep(20.,130.,-wp.z);
@@ -37,9 +50,24 @@ void fragment(){
     if(swash_enabled)edge=0.0;
     col=mix(col,vec3(.67,.72,.66),edge*.63);
     col=mix(col,vec3(.37,.45,.47),farwater*.82);
+    if(cape_zone>.001){
+        vec2 p=local_shore;
+        float ripples=sin(p.y*4.9+p.x*.82+TIME*.9+wave(p*.42)*2.6)*.62+sin(p.y*8.7-p.x*1.10-TIME*.72)*.38;
+        float glint=pow(max(0.0,ripples),9.0);
+        float sun_path=exp(-pow((p.x-cape_reflection_x+p.y*.09)/16.5,2.0));
+        vec3 ocean=mix(vec3(.10,.22,.255),vec3(.38,.48,.46),smoothstep(26.0,145.0,-p.y));
+        ocean=mix(ocean,vec3(.22,.38,.36),shore*.70);
+        ocean+=vec3(.69,.36,.12)*sun_path*(.16+glint*.95);
+        float coastal_sun=exp(-pow((p.x+78.0+p.y*.05)/18.0,2.0));
+        ocean+=vec3(.52,.25,.07)*coastal_sun*glint*.72;
+        float foam=(1.0-smoothstep(.03,.43,thickness))*smoothstep(.08,.6,wave(p*.71+TIME*.02));
+        ocean=mix(ocean,vec3(.73,.76,.69),foam*.60);
+        col=mix(col,ocean,cape_zone);
+    }
     // Far paintings contain their own pale cloudsea; the physical sea fades
     // into that middle layer instead of painting over the mountains and sky.
     float fade=1.-smoothstep(10.,36.,-wp.z+sin(wp.x*.15)*2.1);
+    fade=mix(fade,1.0-smoothstep(120.0,190.0,-local_shore.y),cape_zone);
     float transmission=swash_enabled?shore*exp(-thickness*.95):0.0;
     // The inland valley falls below the ocean plane. Its authored footprint
     // stays dry; otherwise this transparent sea paints over the rear groves.
